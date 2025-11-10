@@ -24,6 +24,7 @@ export const Footer = () => {
               <li><a href="/comer" className="text-muted-foreground hover:text-primary transition-colors">Comer</a></li>
               <li><a href="/criar" className="text-muted-foreground hover:text-primary transition-colors">Criar</a></li>
               <li><a href="/explorar" className="text-muted-foreground hover:text-primary transition-colors">Explorar</a></li>
+              <li><a href="/cultivar" className="text-muted-foreground hover:text-primary transition-colors">Cultivar</a></li>
             </ul>
           </div>
 
@@ -33,7 +34,7 @@ export const Footer = () => {
             <ul className="space-y-2 font-body text-sm">
               <li><a href="/sobre" className="text-muted-foreground hover:text-primary transition-colors">Sobre</a></li>
               <li><a href="/contato" className="text-muted-foreground hover:text-primary transition-colors">Contato</a></li>
-              <li><a href="/newsletter" className="text-muted-foreground hover:text-primary transition-colors">Newsletter</a></li>
+              <li><a href="/quiz" className="text-muted-foreground hover:text-primary transition-colors">Quiz</a></li>
             </ul>
           </div>
 

@@ -12,6 +12,9 @@ const navigation = [
   { name: "Comer", href: "/comer" },
   { name: "Criar", href: "/criar" },
   { name: "Explorar", href: "/explorar" },
+  { name: "Cultivar", href: "/cultivar" },
+  { name: "Quiz", href: "/quiz" },
+  { name: "Contato", href: "/contato" },
 ];
 
 export const Header = () => {
