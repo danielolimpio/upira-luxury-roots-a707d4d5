@@ -37,10 +37,10 @@ export const CategorySidebar = ({
               <li key={post.id}>
                 <a
                   href={`#post-${post.id}`}
-                  className="group block font-body text-sm text-foreground hover:text-primary transition-colors"
+                  className="group block font-body text-base text-foreground hover:text-primary transition-colors"
                 >
                   <p className="font-medium group-hover:underline">{post.title}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{post.date}</p>
+                  <p className="text-sm text-muted-foreground mt-1">{post.date}</p>
                 </a>
               </li>
             ))}
@@ -62,10 +62,10 @@ export const CategorySidebar = ({
               <li key={post.id}>
                 <a
                   href={`#post-${post.id}`}
-                  className="group block font-body text-sm text-foreground hover:text-primary transition-colors"
+                  className="group block font-body text-base text-foreground hover:text-primary transition-colors"
                 >
                   <p className="font-medium group-hover:underline">{post.title}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{post.date}</p>
+                  <p className="text-sm text-muted-foreground mt-1">{post.date}</p>
                 </a>
               </li>
             ))}
@@ -82,7 +82,7 @@ export const CategorySidebar = ({
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="font-body text-sm text-foreground mb-4">{quizTitle}</p>
+          <p className="font-body text-base text-foreground mb-4">{quizTitle}</p>
           <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary-dark">
             <a href={quizLink}>Fazer Quiz</a>
           </Button>

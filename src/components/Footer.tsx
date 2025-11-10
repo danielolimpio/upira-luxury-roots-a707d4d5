@@ -18,8 +18,8 @@ export const Footer = () => {
 
           {/* Navigation */}
           <div>
-            <h3 className="mb-4 font-heading text-sm font-semibold text-foreground">Explorar</h3>
-            <ul className="space-y-2 font-body text-sm">
+            <h3 className="mb-4 font-heading text-base font-semibold text-foreground">Explorar</h3>
+            <ul className="space-y-2 font-body text-base">
               <li><a href="/viver" className="text-muted-foreground hover:text-primary transition-colors">Viver</a></li>
               <li><a href="/comer" className="text-muted-foreground hover:text-primary transition-colors">Comer</a></li>
               <li><a href="/criar" className="text-muted-foreground hover:text-primary transition-colors">Criar</a></li>
@@ -30,8 +30,8 @@ export const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="mb-4 font-heading text-sm font-semibold text-foreground">Recursos</h3>
-            <ul className="space-y-2 font-body text-sm">
+            <h3 className="mb-4 font-heading text-base font-semibold text-foreground">Recursos</h3>
+            <ul className="space-y-2 font-body text-base">
               <li><a href="/sobre" className="text-muted-foreground hover:text-primary transition-colors">Sobre</a></li>
               <li><a href="/contato" className="text-muted-foreground hover:text-primary transition-colors">Contato</a></li>
               <li><a href="/quiz" className="text-muted-foreground hover:text-primary transition-colors">Quiz</a></li>
@@ -40,8 +40,8 @@ export const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h3 className="mb-4 font-heading text-sm font-semibold text-foreground">Legal</h3>
-            <ul className="space-y-2 font-body text-sm">
+            <h3 className="mb-4 font-heading text-base font-semibold text-foreground">Legal</h3>
+            <ul className="space-y-2 font-body text-base">
               <li><a href="/privacidade" className="text-muted-foreground hover:text-primary transition-colors">Privacidade</a></li>
               <li><a href="/termos" className="text-muted-foreground hover:text-primary transition-colors">Termos de Uso</a></li>
               <li><a href="/cookies" className="text-muted-foreground hover:text-primary transition-colors">Política de Cookies</a></li>

@@ -87,7 +87,7 @@ export const BlogGrid = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/60 to-transparent" />
               </div>
               <CardContent className="p-6">
-                <div className="mb-3 flex items-center gap-2 text-sm text-muted-foreground font-body">
+                <div className="mb-3 flex items-center gap-2 text-base text-muted-foreground font-body">
                   <Icon className="h-4 w-4 text-primary" />
                   <span>{post.category}</span>
                   <span>•</span>
@@ -96,7 +96,7 @@ export const BlogGrid = () => {
                 <h3 className="mb-2 font-heading text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                   {post.title}
                 </h3>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                <p className="font-body text-base text-muted-foreground leading-relaxed">
                   {post.excerpt}
                 </p>
               </CardContent>

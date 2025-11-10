@@ -8,6 +8,7 @@ import {
 import { NavLink } from "@/components/NavLink";
 
 const navigation = [
+  { name: "Home", href: "/" },
   { name: "Viver", href: "/viver" },
   { name: "Comer", href: "/comer" },
   { name: "Criar", href: "/criar" },
@@ -20,19 +21,14 @@ const navigation = [
 export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="container mx-auto flex h-16 items-center justify-between px-4">
-        {/* Logo */}
-        <NavLink to="/" className="flex items-center space-x-2">
-          <span className="font-heading text-2xl font-bold text-primary">Upira</span>
-        </NavLink>
-
+      <nav className="container mx-auto flex h-16 items-center justify-center px-4">
         {/* Desktop Navigation */}
         <div className="hidden md:flex md:gap-8">
           {navigation.map((item) => (
             <NavLink
               key={item.name}
               to={item.href}
-              className="font-body text-sm font-medium text-foreground transition-colors hover:text-primary"
+              className="font-body text-base font-medium text-foreground transition-colors hover:text-primary"
               activeClassName="text-primary"
             >
               {item.name}
@@ -54,7 +50,7 @@ export const Header = () => {
                 <NavLink
                   key={item.name}
                   to={item.href}
-                  className="font-body text-lg font-medium text-foreground transition-colors hover:text-primary"
+                  className="font-body text-xl font-medium text-foreground transition-colors hover:text-primary"
                   activeClassName="text-primary"
                 >
                   {item.name}
