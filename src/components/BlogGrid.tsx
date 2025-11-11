@@ -31,6 +31,7 @@ const blogPosts = [
     date: "10 Jan 2025",
     excerpt: "Do fogão à lenha à fogueira: técnicas refinadas para elevar sua culinária ao ar livre.",
     image: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&auto=format&fit=crop&q=80",
+    link: "/cozinhar-com-fogo-guia-pratico",
   },
   {
     id: 4,

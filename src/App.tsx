@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Viver from "./pages/Viver";
 import Comer from "./pages/Comer";
 import Criar from "./pages/Criar";
+import CozinharComFogo from "./pages/CozinharComFogo";
 import Explorar from "./pages/Explorar";
 import Cultivar from "./pages/Cultivar";
 import Sobre from "./pages/Sobre";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/despensa-off-grid-6-meses" element={<DespensaOffGrid />} />
           <Route path="/habitos-consumo-reduzem-estresse" element={<HabitosConsumo />} />
+          <Route path="/cozinhar-com-fogo-guia-pratico" element={<CozinharComFogo />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
