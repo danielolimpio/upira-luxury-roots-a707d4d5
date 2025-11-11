@@ -13,6 +13,7 @@ import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato";
 import Quiz from "./pages/Quiz";
 import DespensaOffGrid from "./pages/DespensaOffGrid";
+import HabitosConsumo from "./pages/HabitosConsumo";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/contato" element={<Contato />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/despensa-off-grid-6-meses" element={<DespensaOffGrid />} />
+          <Route path="/habitos-consumo-reduzem-estresse" element={<HabitosConsumo />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

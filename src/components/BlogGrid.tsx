@@ -21,6 +21,7 @@ const blogPosts = [
     date: "12 Jan 2025",
     excerpt: "Descubra práticas que trazem bem-estar genuíno sem sacrificar o conforto.",
     image: "https://images.unsplash.com/photo-1516542076529-1ea3854896f2?w=800&auto=format&fit=crop&q=80",
+    link: "/habitos-consumo-reduzem-estresse",
   },
   {
     id: 3,
