@@ -1,4 +1,5 @@
 import logo from "@/assets/logo-upira.png";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -7,9 +8,9 @@ export const Footer = () => {
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center">
-              <img src={logo} alt="Upira" className="h-12 w-auto" />
-            </div>
+            <Link to="/" className="flex items-center">
+              <img src={logo} alt="Upira" className="h-16 w-auto" />
+            </Link>
             <p className="font-body text-base text-muted-foreground">
               Feito para quem escolhe viver bem.
             </p>
@@ -19,11 +20,11 @@ export const Footer = () => {
           <div>
             <h3 className="mb-4 font-heading text-base font-semibold text-foreground">Explorar</h3>
             <ul className="space-y-2 font-body text-base">
-              <li><a href="/viver" className="text-muted-foreground hover:text-primary transition-colors">Viver</a></li>
-              <li><a href="/comer" className="text-muted-foreground hover:text-primary transition-colors">Comer</a></li>
-              <li><a href="/criar" className="text-muted-foreground hover:text-primary transition-colors">Criar</a></li>
-              <li><a href="/explorar" className="text-muted-foreground hover:text-primary transition-colors">Explorar</a></li>
-              <li><a href="/cultivar" className="text-muted-foreground hover:text-primary transition-colors">Cultivar</a></li>
+              <li><Link to="/viver" className="text-muted-foreground hover:text-primary transition-colors">Viver</Link></li>
+              <li><Link to="/comer" className="text-muted-foreground hover:text-primary transition-colors">Comer</Link></li>
+              <li><Link to="/criar" className="text-muted-foreground hover:text-primary transition-colors">Criar</Link></li>
+              <li><Link to="/explorar" className="text-muted-foreground hover:text-primary transition-colors">Explorar</Link></li>
+              <li><Link to="/cultivar" className="text-muted-foreground hover:text-primary transition-colors">Cultivar</Link></li>
             </ul>
           </div>
 
@@ -31,9 +32,9 @@ export const Footer = () => {
           <div>
             <h3 className="mb-4 font-heading text-base font-semibold text-foreground">Recursos</h3>
             <ul className="space-y-2 font-body text-base">
-              <li><a href="/sobre" className="text-muted-foreground hover:text-primary transition-colors">Sobre</a></li>
-              <li><a href="/contato" className="text-muted-foreground hover:text-primary transition-colors">Contato</a></li>
-              <li><a href="/quiz" className="text-muted-foreground hover:text-primary transition-colors">Quiz</a></li>
+              <li><Link to="/sobre" className="text-muted-foreground hover:text-primary transition-colors">Sobre</Link></li>
+              <li><Link to="/contato" className="text-muted-foreground hover:text-primary transition-colors">Contato</Link></li>
+              <li><Link to="/quiz" className="text-muted-foreground hover:text-primary transition-colors">Quiz</Link></li>
             </ul>
           </div>
 

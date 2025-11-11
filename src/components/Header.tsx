@@ -25,7 +25,7 @@ export const Header = () => {
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <NavLink to="/" className="flex items-center">
-          <img src={logo} alt="Upira" className="h-10 w-auto" />
+          <img src={logo} alt="Upira" className="h-14 w-auto" />
         </NavLink>
 
         {/* Desktop Navigation */}

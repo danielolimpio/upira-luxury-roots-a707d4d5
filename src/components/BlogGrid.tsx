@@ -1,5 +1,6 @@
 import { Flame, Droplet, Trees, Coffee, Lightbulb } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
@@ -10,6 +11,7 @@ const blogPosts = [
     date: "15 Jan 2025",
     excerpt: "Estratégias práticas e elegantes para organizar sua despensa com autonomia e sofisticação.",
     image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&auto=format&fit=crop&q=80",
+    link: "/despensa-off-grid-6-meses",
   },
   {
     id: 2,
@@ -73,10 +75,40 @@ export const BlogGrid = () => {
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {blogPosts.map((post) => {
           const Icon = post.icon;
-          return (
+          
+          return post.link ? (
+            <Link key={post.id} to={post.link} className="block no-underline">
+              <Card 
+                className="group overflow-hidden border-border bg-card shadow-upira-sm transition-all hover:shadow-upira-md cursor-pointer h-full"
+              >
+                <div className="relative aspect-[3/2] overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/60 to-transparent" />
+                </div>
+                <CardContent className="p-6">
+                  <div className="mb-3 flex items-center gap-2 text-base text-muted-foreground font-body">
+                    <Icon className="h-4 w-4 text-primary" />
+                    <span>{post.category}</span>
+                    <span>•</span>
+                    <span>{post.date}</span>
+                  </div>
+                  <h3 className="mb-2 font-heading text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="font-body text-base text-muted-foreground leading-relaxed">
+                    {post.excerpt}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+          ) : (
             <Card 
-              key={post.id} 
-              className="group overflow-hidden border-border bg-card shadow-upira-sm transition-all hover:shadow-upira-md cursor-pointer"
+              key={post.id}
+              className="group overflow-hidden border-border bg-card shadow-upira-sm transition-all hover:shadow-upira-md cursor-pointer h-full"
             >
               <div className="relative aspect-[3/2] overflow-hidden">
                 <img
