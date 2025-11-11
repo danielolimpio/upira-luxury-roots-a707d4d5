@@ -15,6 +15,7 @@ const navigation = [
   { name: "Criar", href: "/criar" },
   { name: "Explorar", href: "/explorar" },
   { name: "Cultivar", href: "/cultivar" },
+  { name: "Sobre", href: "/sobre" },
   { name: "Quiz", href: "/quiz" },
   { name: "Contato", href: "/contato" },
 ];
@@ -29,7 +30,7 @@ export const Header = () => {
         </NavLink>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex md:gap-8">
+        <div className="hidden md:flex md:gap-8 mx-auto">
           {navigation.map((item) => (
             <NavLink
               key={item.name}

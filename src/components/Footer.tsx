@@ -1,5 +1,6 @@
 import logo from "@/assets/logo-upira.png";
 import { Link } from "react-router-dom";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -14,12 +15,31 @@ export const Footer = () => {
             <p className="font-body text-base text-muted-foreground">
               Feito para quem escolhe viver bem.
             </p>
+            <div className="space-y-2 font-body text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4" />
+                <a href="mailto:contato@upira.com.br" className="hover:text-primary transition-colors">
+                  contato@upira.com.br
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                <a href="tel:+5512982519116" className="hover:text-primary transition-colors">
+                  (12) 98251-9116
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4 w-4" />
+                <span>Av. Julia Freire, 1200 - João Pessoa - PB/Brasil</span>
+              </div>
+            </div>
           </div>
 
           {/* Navigation */}
           <div>
             <h3 className="mb-4 font-heading text-base font-semibold text-foreground">Explorar</h3>
             <ul className="space-y-2 font-body text-base">
+              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
               <li><Link to="/viver" className="text-muted-foreground hover:text-primary transition-colors">Viver</Link></li>
               <li><Link to="/comer" className="text-muted-foreground hover:text-primary transition-colors">Comer</Link></li>
               <li><Link to="/criar" className="text-muted-foreground hover:text-primary transition-colors">Criar</Link></li>
@@ -52,7 +72,15 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-border pt-8 text-center">
           <p className="font-body text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Upira. Todos os direitos reservados.
+            © Copyright {new Date().getFullYear()} | Upira.com.br | Todos os direitos reservados | Desenvolvido por{" "}
+            <a 
+              href="https://danielolimpio.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              DanielOlimpio
+            </a>
           </p>
         </div>
       </div>
