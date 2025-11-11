@@ -6,6 +6,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { NavLink } from "@/components/NavLink";
+import logo from "@/assets/logo-upira.png";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -21,7 +22,12 @@ const navigation = [
 export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="container mx-auto flex h-16 items-center justify-center px-4">
+      <nav className="container mx-auto flex h-16 items-center justify-between px-4">
+        {/* Logo */}
+        <NavLink to="/" className="flex items-center">
+          <img src={logo} alt="Upira" className="h-10 w-auto" />
+        </NavLink>
+
         {/* Desktop Navigation */}
         <div className="hidden md:flex md:gap-8">
           {navigation.map((item) => (

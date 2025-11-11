@@ -1,4 +1,4 @@
-import { Leaf } from "lucide-react";
+import logo from "@/assets/logo-upira.png";
 
 export const Footer = () => {
   return (
@@ -7,11 +7,10 @@ export const Footer = () => {
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <Leaf className="h-6 w-6 text-primary" />
-              <span className="font-heading text-2xl font-bold text-primary">Upira</span>
+            <div className="flex items-center">
+              <img src={logo} alt="Upira" className="h-12 w-auto" />
             </div>
-            <p className="font-body text-sm text-muted-foreground">
+            <p className="font-body text-base text-muted-foreground">
               Feito para quem escolhe viver bem.
             </p>
           </div>
