@@ -17,6 +17,7 @@ const navigation = [
   { name: "Cultivar", href: "/cultivar" },
   { name: "Sobre", href: "/sobre" },
   { name: "Quiz", href: "/quiz" },
+  { name: "Blog", href: "/blog" },
   { name: "Contato", href: "/contato" },
 ];
 
