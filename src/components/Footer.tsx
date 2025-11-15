@@ -40,21 +40,22 @@ export const Footer = () => {
             <h3 className="mb-4 font-heading text-base font-semibold text-foreground">Explorar</h3>
             <ul className="space-y-2 font-body text-base">
               <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
+              <li><Link to="/sobre" className="text-muted-foreground hover:text-primary transition-colors">Sobre</Link></li>
+              <li><Link to="/quiz" className="text-muted-foreground hover:text-primary transition-colors">Quiz</Link></li>
+              <li><Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
+              <li><Link to="/contato" className="text-muted-foreground hover:text-primary transition-colors">Contato</Link></li>
+            </ul>
+          </div>
+
+          {/* Categories */}
+          <div>
+            <h3 className="mb-4 font-heading text-base font-semibold text-foreground">Categorias</h3>
+            <ul className="space-y-2 font-body text-base">
               <li><Link to="/viver" className="text-muted-foreground hover:text-primary transition-colors">Viver</Link></li>
               <li><Link to="/comer" className="text-muted-foreground hover:text-primary transition-colors">Comer</Link></li>
               <li><Link to="/criar" className="text-muted-foreground hover:text-primary transition-colors">Criar</Link></li>
               <li><Link to="/explorar" className="text-muted-foreground hover:text-primary transition-colors">Explorar</Link></li>
               <li><Link to="/cultivar" className="text-muted-foreground hover:text-primary transition-colors">Cultivar</Link></li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="mb-4 font-heading text-base font-semibold text-foreground">Recursos</h3>
-            <ul className="space-y-2 font-body text-base">
-              <li><Link to="/sobre" className="text-muted-foreground hover:text-primary transition-colors">Sobre</Link></li>
-              <li><Link to="/contato" className="text-muted-foreground hover:text-primary transition-colors">Contato</Link></li>
-              <li><Link to="/quiz" className="text-muted-foreground hover:text-primary transition-colors">Quiz</Link></li>
             </ul>
           </div>
 
