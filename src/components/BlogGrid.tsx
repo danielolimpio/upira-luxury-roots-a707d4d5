@@ -38,9 +38,10 @@ const blogPosts = [
     title: "Sistema de captação de água: beleza e funcionalidade",
     category: "Criar",
     icon: Droplet,
-    date: "8 Jan 2025",
+    date: "15 Nov 2025",
     excerpt: "Como integrar soluções hídricas ao design da sua propriedade com elegância.",
     image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&auto=format&fit=crop&q=80",
+    link: "/sistema-captacao-agua-beleza-funcionalidade",
   },
   {
     id: 5,
