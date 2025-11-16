@@ -22,6 +22,7 @@ import {
   Lightbulb,
   Star
 } from "lucide-react";
+import fogoImage from "@/assets/category-criar.jpg";
 
 const CozinharComFogo = () => {
   return (
@@ -56,7 +57,7 @@ const CozinharComFogo = () => {
                 "url": "https://upira.com.br/logo.png"
               }
             },
-            "datePublished": "2025-01-10",
+            "datePublished": "2025-11-14",
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": "https://upira.com.br/cozinhar-com-fogo-guia-pratico"
@@ -68,8 +69,18 @@ const CozinharComFogo = () => {
       <Header />
 
       <main className="min-h-screen bg-background">
+        {/* Hero Image */}
+        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
+          <img
+            src={fogoImage}
+            alt="Cozinhar com fogo: guia prático para pratos gourmet"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+        </div>
+
         {/* Hero Section */}
-        <section className="relative py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <section className="relative -mt-32 pb-16 md:pb-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <div className="flex items-center justify-center gap-2 text-primary">
@@ -88,7 +99,7 @@ const CozinharComFogo = () => {
               <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />
-                  <span>10 Jan 2025</span>
+                  <span>14 Nov 2025</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <ChefHat className="h-4 w-4" />

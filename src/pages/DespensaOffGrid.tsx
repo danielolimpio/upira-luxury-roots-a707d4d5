@@ -24,6 +24,7 @@ import {
   Sparkles,
   Home
 } from "lucide-react";
+import despensaImage from "@/assets/category-comer.jpg";
 
 const DespensaOffGrid = () => {
   return (
@@ -53,7 +54,8 @@ const DespensaOffGrid = () => {
             "publisher": {
               "@type": "Organization",
               "name": "Upira"
-            }
+            },
+            "datePublished": "2025-11-10"
           })}
         </script>
       </Helmet>
@@ -61,8 +63,18 @@ const DespensaOffGrid = () => {
       <div className="min-h-screen bg-background">
         <Header />
         
+        {/* Hero Image */}
+        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
+          <img
+            src={despensaImage}
+            alt="Como montar uma despensa off-grid que dura 6 meses"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+        </div>
+        
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden bg-gradient-to-b from-primary-dark/5 to-background">
+        <section className="relative -mt-32 pb-20 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-4">
@@ -85,7 +97,7 @@ const DespensaOffGrid = () => {
                 </span>
                 <span className="flex items-center gap-2">
                   <Leaf className="w-4 h-4" />
-                  Categoria: Viver
+                  Categoria: Comer
                 </span>
               </div>
             </div>
