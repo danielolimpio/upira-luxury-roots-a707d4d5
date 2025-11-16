@@ -23,6 +23,7 @@ import {
   Shield
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import habitosImage from "@/assets/category-explorar.jpg";
 
 const HabitosConsumo = () => {
   return (
@@ -44,7 +45,7 @@ const HabitosConsumo = () => {
         <meta property="og:description" content="Descubra práticas que trazem bem-estar genuíno sem sacrificar o conforto — e ainda ajudam você a viver com mais clareza, propósito e tranquilidade no dia a dia." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://upira.com.br/habitos-consumo-reduzem-estresse" />
-        <meta property="article:published_time" content="2025-01-12T00:00:00Z" />
+        <meta property="article:published_time" content="2025-11-12T00:00:00Z" />
         <meta property="article:author" content="Upira" />
         <meta property="article:section" content="Explorar" />
         
@@ -63,8 +64,8 @@ const HabitosConsumo = () => {
               "@type": "Organization",
               "name": "Upira"
             },
-            "datePublished": "2025-01-12",
-            "dateModified": "2025-01-12",
+            "datePublished": "2025-11-12",
+            "dateModified": "2025-11-12",
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": "https://upira.com.br/habitos-consumo-reduzem-estresse"
@@ -76,7 +77,17 @@ const HabitosConsumo = () => {
       <div className="min-h-screen bg-background">
         <Header />
         
-        <main className="container mx-auto px-4 py-12 md:py-16">
+        {/* Hero Image */}
+        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
+          <img
+            src={habitosImage}
+            alt="5 hábitos de consumo que reduzem o estresse"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+        </div>
+        
+        <main className="container mx-auto px-4 py-12 md:py-16 -mt-32 relative">
           {/* Hero Section */}
           <article className="max-w-4xl mx-auto">
             <header className="mb-12 text-center">
