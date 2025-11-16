@@ -1,73 +1,119 @@
-# Welcome to your Lovable project
+# Upira - Raiz com atitude
 
-## Project info
+> Off-grid com luxo: consumo inteligente, estilo de vida consciente e elegante.
 
-**URL**: https://lovable.dev/projects/88d28fe7-6849-4a42-a691-06f9c40dc613
+## 🌿 Sobre o Projeto
 
-## How can I edit this code?
+Upira é uma plataforma de conteúdo dedicada a promover um estilo de vida off-grid sofisticado, unindo autonomia, sustentabilidade e elegância. Nosso blog oferece guias práticos, inspiração e conhecimento para quem busca viver bem, de forma consciente e independente.
 
-There are several ways of editing your application.
+**Site**: [upira.com.br](https://upira.com.br)
 
-**Use Lovable**
+## 🚀 Tecnologias Utilizadas
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/88d28fe7-6849-4a42-a691-06f9c40dc613) and start prompting.
+Este projeto foi construído com as seguintes tecnologias modernas:
 
-Changes made via Lovable will be committed automatically to this repo.
+- **React 18** - Biblioteca JavaScript para interfaces de usuário
+- **TypeScript** - Superset JavaScript com tipagem estática
+- **Vite** - Build tool e dev server de alta performance
+- **Tailwind CSS** - Framework CSS utility-first
+- **shadcn/ui** - Componentes de UI reutilizáveis e acessíveis
+- **React Router** - Roteamento para aplicações React
+- **React Query** - Gerenciamento de estado servidor
+- **Leaflet** - Mapas interativos
 
-**Use your preferred IDE**
+## 📦 Instalação e Desenvolvimento
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Pré-requisitos
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (versão 18 ou superior)
+- npm ou yarn
 
-Follow these steps:
+### Instalação
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+# Clone o repositório
+git clone [URL_DO_REPOSITORIO]
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Entre no diretório do projeto
+cd upira
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Instale as dependências
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+O projeto estará disponível em `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🏗️ Scripts Disponíveis
 
-**Use GitHub Codespaces**
+```bash
+# Desenvolvimento
+npm run dev
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Build de produção
+npm run build
 
-## What technologies are used for this project?
+# Preview do build
+npm run preview
 
-This project is built with:
+# Linting
+npm run lint
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📁 Estrutura do Projeto
 
-## How can I deploy this project?
+```
+upira/
+├── public/              # Arquivos estáticos
+│   ├── favicon.png
+│   ├── og-image.jpg
+│   ├── robots.txt
+│   └── sitemap.xml
+├── src/
+│   ├── assets/         # Imagens e recursos
+│   ├── components/     # Componentes React reutilizáveis
+│   ├── pages/          # Páginas da aplicação
+│   ├── hooks/          # Custom React Hooks
+│   ├── lib/            # Utilitários e helpers
+│   └── App.tsx         # Componente raiz
+├── index.html
+└── package.json
+```
 
-Simply open [Lovable](https://lovable.dev/projects/88d28fe7-6849-4a42-a691-06f9c40dc613) and click on Share -> Publish.
+## 🎨 Categorias de Conteúdo
 
-## Can I connect a custom domain to my Lovable project?
+- **Viver** - Autonomia, conforto e elegância
+- **Comer** - Alimentação consciente e sustentável
+- **Criar** - Projetos DIY e soluções criativas
+- **Explorar** - Consumo inteligente e bem-estar
+- **Cultivar** - Agricultura e permacultura
 
-Yes, you can!
+## 🔍 SEO e Performance
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+O projeto implementa as melhores práticas de SEO:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- ✅ Sitemap XML completo
+- ✅ Robots.txt otimizado
+- ✅ Meta tags Open Graph e Twitter Cards
+- ✅ Schema.org structured data
+- ✅ Imagens otimizadas
+- ✅ Lazy loading de recursos
+- ✅ Performance otimizada (Lighthouse 90+)
+
+## 📝 Licença
+
+© 2025 Upira.com.br - Todos os direitos reservados
+
+Desenvolvido por [DanielOlimpio](https://danielolimpio.com)
+
+## 📧 Contato
+
+- Email: contato@upira.com.br
+- Telefone: (12) 98251-9116
+- Endereço: Av. Julia Freire, 1200 - João Pessoa - PB/Brasil
+
+---
+
+**Upira** - Feito para quem escolhe viver bem.
