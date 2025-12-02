@@ -17,6 +17,7 @@ import Blog from "./pages/Blog";
 import DespensaOffGrid from "./pages/DespensaOffGrid";
 import HabitosConsumo from "./pages/HabitosConsumo";
 import SistemaCaptacaoAgua from "./pages/SistemaCaptacaoAgua";
+import PaisagismoFuncional from "./pages/PaisagismoFuncional";
 import Privacidade from "./pages/Privacidade";
 import Termos from "./pages/Termos";
 import Cookies from "./pages/Cookies";
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/habitos-consumo-reduzem-estresse" element={<HabitosConsumo />} />
           <Route path="/cozinhar-com-fogo-guia-pratico" element={<CozinharComFogo />} />
           <Route path="/sistema-captacao-agua-beleza-funcionalidade" element={<SistemaCaptacaoAgua />} />
+          <Route path="/paisagismo-funcional-jardins-que-trabalham" element={<PaisagismoFuncional />} />
           <Route path="/privacidade" element={<Privacidade />} />
           <Route path="/termos" element={<Termos />} />
           <Route path="/cookies" element={<Cookies />} />

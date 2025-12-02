@@ -46,11 +46,12 @@ const blogPosts = [
   {
     id: 5,
     title: "Paisagismo funcional: jardins que trabalham por você",
-    category: "Viver",
+    category: "Cultivar",
     icon: Trees,
-    date: "5 Jan 2025",
+    date: "02 Dez 2025",
     excerpt: "Plantas que embelezam, alimentam e protegem - o luxo da natureza inteligente.",
     image: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=800&auto=format&fit=crop&q=80",
+    link: "/paisagismo-funcional-jardins-que-trabalham",
   },
   {
     id: 6,
