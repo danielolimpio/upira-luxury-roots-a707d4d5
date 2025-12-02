@@ -61,6 +61,7 @@ const blogPosts = [
     date: "3 Jan 2025",
     excerpt: "Estratégias de design para maximizar luz natural com sofisticação e economia.",
     image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&auto=format&fit=crop&q=80",
+    link: "/iluminacao-natural-arquitetura-conversa-com-sol",
   },
 ];
 
