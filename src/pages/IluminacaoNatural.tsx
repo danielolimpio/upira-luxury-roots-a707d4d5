@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sun, Home, Lightbulb, Eye, Leaf, TrendingDown, Heart, Sparkles, Wind, Shield, MapPin, Trees, ArrowRight, CheckCircle2, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { AuthorCard } from "@/components/AuthorCard";
 
 const IluminacaoNatural = () => {
   return (
@@ -622,6 +623,11 @@ const IluminacaoNatural = () => {
                 </ul>
               </CardContent>
             </Card>
+          </section>
+
+          {/* Autor */}
+          <section className="mt-8 pt-8 border-t border-border">
+            <AuthorCard variant="compact" />
           </section>
 
         </article>

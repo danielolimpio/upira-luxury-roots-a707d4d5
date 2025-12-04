@@ -23,6 +23,7 @@ import {
   Star
 } from "lucide-react";
 import fogoImage from "@/assets/category-criar.jpg";
+import { AuthorCard } from "@/components/AuthorCard";
 
 const CozinharComFogo = () => {
   return (
@@ -694,6 +695,11 @@ const CozinharComFogo = () => {
                     </p>
                   </div>
                 </div>
+              </section>
+
+              {/* Autor */}
+              <section className="mt-12 pt-8 border-t border-border">
+                <AuthorCard variant="compact" />
               </section>
             </div>
           </div>

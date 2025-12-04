@@ -25,6 +25,8 @@ import {
   Home
 } from "lucide-react";
 import despensaImage from "@/assets/category-comer.jpg";
+import { AuthorCard } from "@/components/AuthorCard";
+import { Link } from "react-router-dom";
 
 const DespensaOffGrid = () => {
   return (
@@ -787,12 +789,17 @@ const DespensaOffGrid = () => {
                   className="font-semibold"
                   asChild
                 >
-                  <a href="/quiz">
+                  <Link to="/quiz">
                     Fazer o Quiz Agora
                     <ArrowRight className="ml-2 w-5 h-5" />
-                  </a>
+                  </Link>
                 </Button>
               </Card>
+            </section>
+
+            {/* Autor */}
+            <section className="mt-8 pt-8 border-t border-border">
+              <AuthorCard variant="compact" />
             </section>
 
           </article>

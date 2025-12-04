@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import habitosImage from "@/assets/category-explorar.jpg";
+import { AuthorCard } from "@/components/AuthorCard";
 
 const HabitosConsumo = () => {
   return (
@@ -743,6 +744,11 @@ const HabitosConsumo = () => {
                   </Link>
                 </CardContent>
               </Card>
+            </section>
+
+            {/* Autor */}
+            <section className="mt-8 pt-8 border-t border-border">
+              <AuthorCard variant="compact" />
             </section>
           </article>
         </main>
