@@ -26,6 +26,7 @@ import {
   Circle
 } from "lucide-react";
 import heroImage from "@/assets/sistema-captacao-agua.jpg";
+import { AuthorCard } from "@/components/AuthorCard";
 
 const SistemaCaptacaoAgua = () => {
   return (
@@ -898,15 +899,10 @@ const SistemaCaptacaoAgua = () => {
               </CardContent>
             </Card>
 
-            {/* Publicado em */}
-            <div className="mt-12 pt-8 border-t border-border text-center">
-              <p className="font-body text-sm text-muted-foreground">
-                Publicado em 15 de novembro de 2025 — Atualizado com dados mais recentes da ANA e do IBGE.
-              </p>
-              <p className="font-body text-sm text-muted-foreground mt-2">
-                Este conteúdo foi escrito por um redator especializado em sustentabilidade e design residencial, com mais de 15 anos de experiência em projetos de arquitetura bioclimática.
-              </p>
-            </div>
+            {/* Autor */}
+            <section className="mt-12 pt-8 border-t border-border">
+              <AuthorCard variant="compact" />
+            </section>
 
           </article>
         </main>

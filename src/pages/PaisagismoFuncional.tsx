@@ -25,6 +25,7 @@ import {
   Circle
 } from "lucide-react";
 import heroImage from "@/assets/category-cultivar.jpg";
+import { AuthorCard } from "@/components/AuthorCard";
 
 const PaisagismoFuncional = () => {
   return (
@@ -681,6 +682,11 @@ const PaisagismoFuncional = () => {
               <p className="text-sm text-muted-foreground font-body">
                 <strong>Fontes de referência:</strong> <a href="https://www.embrapa.br" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">Embrapa</a>, <a href="https://www.usp.br" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">USP – Núcleo de Estudos em Permacultura</a>, <a href="https://www.gov.br/mma" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">Ministério do Meio Ambiente</a>.
               </p>
+            </section>
+
+            {/* Autor */}
+            <section className="mt-16 pt-8 border-t border-border">
+              <AuthorCard variant="compact" />
             </section>
 
           </article>
