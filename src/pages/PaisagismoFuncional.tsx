@@ -28,6 +28,7 @@ import heroImage from "@/assets/category-cultivar.jpg";
 import { AuthorCard } from "@/components/AuthorCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedArticles } from "@/components/RelatedArticles";
+import { ShareButtons } from "@/components/ShareButtons";
 
 const PaisagismoFuncional = () => {
   return (
@@ -108,6 +109,12 @@ const PaisagismoFuncional = () => {
                 { label: "Cultivar", href: "/cultivar" },
                 { label: "Paisagismo funcional: jardins que trabalham por você" }
               ]} 
+            />
+
+            {/* Share Buttons */}
+            <ShareButtons 
+              title="Paisagismo funcional: jardins que trabalham por você"
+              description="Plantas que embelezam, alimentam e protegem - o luxo da natureza inteligente."
             />
 
             {/* Introdução */}

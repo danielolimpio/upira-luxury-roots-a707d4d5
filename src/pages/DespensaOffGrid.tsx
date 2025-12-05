@@ -29,6 +29,7 @@ import { AuthorCard } from "@/components/AuthorCard";
 import { Link } from "react-router-dom";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedArticles } from "@/components/RelatedArticles";
+import { ShareButtons } from "@/components/ShareButtons";
 
 const DespensaOffGrid = () => {
   return (
@@ -118,6 +119,12 @@ const DespensaOffGrid = () => {
                 { label: "Viver", href: "/viver" },
                 { label: "Como montar uma despensa off-grid que dura 6 meses" }
               ]} 
+            />
+
+            {/* Share Buttons */}
+            <ShareButtons 
+              title="Como montar uma despensa off-grid que dura 6 meses"
+              description="Estratégias práticas e elegantes para organizar sua despensa com autonomia e sofisticação."
             />
             
             {/* Introduction */}

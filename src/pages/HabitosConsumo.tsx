@@ -27,6 +27,7 @@ import habitosImage from "@/assets/category-explorar.jpg";
 import { AuthorCard } from "@/components/AuthorCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedArticles } from "@/components/RelatedArticles";
+import { ShareButtons } from "@/components/ShareButtons";
 
 const HabitosConsumo = () => {
   return (
@@ -126,6 +127,12 @@ const HabitosConsumo = () => {
                 <span>12 min de leitura</span>
               </div>
             </header>
+
+            {/* Share Buttons */}
+            <ShareButtons 
+              title="5 hábitos de consumo que reduzem o estresse"
+              description="Descubra práticas que trazem bem-estar genuíno sem sacrificar o conforto."
+            />
 
             {/* Introdução */}
             <section className="mb-16">

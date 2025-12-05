@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { AuthorCard } from "@/components/AuthorCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedArticles } from "@/components/RelatedArticles";
+import { ShareButtons } from "@/components/ShareButtons";
 
 const IluminacaoNatural = () => {
   return (
@@ -86,6 +87,12 @@ const IluminacaoNatural = () => {
               Estratégias de design para maximizar luz natural com sofisticação e economia.
             </p>
           </header>
+
+          {/* Share Buttons */}
+          <ShareButtons 
+            title="Iluminação natural: arquitetura que conversa com o sol"
+            description="Estratégias de design para maximizar luz natural com sofisticação e economia."
+          />
 
           {/* Introduction */}
           <div className="prose prose-lg max-w-none mb-8">

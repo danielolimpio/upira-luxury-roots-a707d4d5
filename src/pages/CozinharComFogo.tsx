@@ -26,6 +26,7 @@ import fogoImage from "@/assets/category-criar.jpg";
 import { AuthorCard } from "@/components/AuthorCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedArticles } from "@/components/RelatedArticles";
+import { ShareButtons } from "@/components/ShareButtons";
 
 const CozinharComFogo = () => {
   return (
@@ -124,6 +125,12 @@ const CozinharComFogo = () => {
                   { label: "Comer", href: "/comer" },
                   { label: "Cozinhar com fogo: guia prático para pratos gourmet" }
                 ]} 
+              />
+
+              {/* Share Buttons */}
+              <ShareButtons 
+                title="Cozinhar com fogo: guia prático para pratos gourmet"
+                description="Do fogão à lenha à fogueira: técnicas refinadas para elevar sua culinária ao ar livre."
               />
               
               {/* Introduction */}
