@@ -29,6 +29,7 @@ import heroImage from "@/assets/sistema-captacao-agua.jpg";
 import { AuthorCard } from "@/components/AuthorCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedArticles } from "@/components/RelatedArticles";
+import { ShareButtons } from "@/components/ShareButtons";
 
 const SistemaCaptacaoAgua = () => {
   return (
@@ -109,6 +110,12 @@ const SistemaCaptacaoAgua = () => {
                 { label: "Criar", href: "/criar" },
                 { label: "Sistema de captação de água: beleza e funcionalidade" }
               ]} 
+            />
+
+            {/* Share Buttons */}
+            <ShareButtons 
+              title="Sistema de captação de água: beleza e funcionalidade"
+              description="Como integrar soluções hídricas ao design da sua propriedade com elegância."
             />
 
             {/* Introdução */}
