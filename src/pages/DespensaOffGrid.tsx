@@ -27,6 +27,8 @@ import {
 import despensaImage from "@/assets/category-comer.jpg";
 import { AuthorCard } from "@/components/AuthorCard";
 import { Link } from "react-router-dom";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { RelatedArticles } from "@/components/RelatedArticles";
 
 const DespensaOffGrid = () => {
   return (
@@ -109,6 +111,14 @@ const DespensaOffGrid = () => {
         {/* Main Content */}
         <main className="container mx-auto px-4 py-16">
           <article className="max-w-4xl mx-auto">
+
+            {/* Breadcrumbs */}
+            <Breadcrumbs 
+              items={[
+                { label: "Viver", href: "/viver" },
+                { label: "Como montar uma despensa off-grid que dura 6 meses" }
+              ]} 
+            />
             
             {/* Introduction */}
             <section className="space-y-6 mb-16">
@@ -797,8 +807,14 @@ const DespensaOffGrid = () => {
               </Card>
             </section>
 
+            {/* Artigos Relacionados */}
+            <RelatedArticles 
+              currentLink="/despensa-off-grid-6-meses" 
+              category="Viver" 
+            />
+
             {/* Autor */}
-            <section className="mt-8 pt-8 border-t border-border">
+            <section className="mt-16 pt-8 border-t border-border">
               <AuthorCard variant="compact" />
             </section>
 

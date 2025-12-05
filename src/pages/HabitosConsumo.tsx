@@ -25,6 +25,8 @@ import {
 import { Link } from "react-router-dom";
 import habitosImage from "@/assets/category-explorar.jpg";
 import { AuthorCard } from "@/components/AuthorCard";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { RelatedArticles } from "@/components/RelatedArticles";
 
 const HabitosConsumo = () => {
   return (
@@ -91,6 +93,16 @@ const HabitosConsumo = () => {
         <main className="container mx-auto px-4 py-12 md:py-16 -mt-32 relative">
           {/* Hero Section */}
           <article className="max-w-4xl mx-auto">
+            {/* Breadcrumbs */}
+            <div className="mb-8">
+              <Breadcrumbs 
+                items={[
+                  { label: "Explorar", href: "/explorar" },
+                  { label: "5 hábitos de consumo que reduzem o estresse" }
+                ]} 
+              />
+            </div>
+
             <header className="mb-12 text-center">
               <div className="flex items-center justify-center gap-2 mb-4 text-primary">
                 <Lightbulb className="h-6 w-6" />
@@ -746,8 +758,14 @@ const HabitosConsumo = () => {
               </Card>
             </section>
 
+            {/* Artigos Relacionados */}
+            <RelatedArticles 
+              currentLink="/habitos-consumo-reduzem-estresse" 
+              category="Explorar" 
+            />
+
             {/* Autor */}
-            <section className="mt-8 pt-8 border-t border-border">
+            <section className="mt-16 pt-8 border-t border-border">
               <AuthorCard variant="compact" />
             </section>
           </article>

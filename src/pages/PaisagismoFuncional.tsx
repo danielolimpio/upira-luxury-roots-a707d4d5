@@ -26,6 +26,8 @@ import {
 } from "lucide-react";
 import heroImage from "@/assets/category-cultivar.jpg";
 import { AuthorCard } from "@/components/AuthorCard";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { RelatedArticles } from "@/components/RelatedArticles";
 
 const PaisagismoFuncional = () => {
   return (
@@ -100,6 +102,14 @@ const PaisagismoFuncional = () => {
           {/* Article Content */}
           <article className="container mx-auto px-4 py-16 max-w-4xl">
             
+            {/* Breadcrumbs */}
+            <Breadcrumbs 
+              items={[
+                { label: "Cultivar", href: "/cultivar" },
+                { label: "Paisagismo funcional: jardins que trabalham por você" }
+              ]} 
+            />
+
             {/* Introdução */}
             <div className="prose prose-lg max-w-none mb-12">
               <p className="text-xl leading-relaxed text-foreground font-body mb-6">
@@ -683,6 +693,12 @@ const PaisagismoFuncional = () => {
                 <strong>Fontes de referência:</strong> <a href="https://www.embrapa.br" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">Embrapa</a>, <a href="https://www.usp.br" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">USP – Núcleo de Estudos em Permacultura</a>, <a href="https://www.gov.br/mma" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">Ministério do Meio Ambiente</a>.
               </p>
             </section>
+
+            {/* Artigos Relacionados */}
+            <RelatedArticles 
+              currentLink="/paisagismo-funcional-jardins-que-trabalham" 
+              category="Cultivar" 
+            />
 
             {/* Autor */}
             <section className="mt-16 pt-8 border-t border-border">

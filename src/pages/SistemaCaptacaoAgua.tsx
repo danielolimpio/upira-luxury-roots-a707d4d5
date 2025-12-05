@@ -27,6 +27,8 @@ import {
 } from "lucide-react";
 import heroImage from "@/assets/sistema-captacao-agua.jpg";
 import { AuthorCard } from "@/components/AuthorCard";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { RelatedArticles } from "@/components/RelatedArticles";
 
 const SistemaCaptacaoAgua = () => {
   return (
@@ -101,6 +103,14 @@ const SistemaCaptacaoAgua = () => {
           {/* Article Content */}
           <article className="container mx-auto px-4 py-16 max-w-4xl">
             
+            {/* Breadcrumbs */}
+            <Breadcrumbs 
+              items={[
+                { label: "Criar", href: "/criar" },
+                { label: "Sistema de captação de água: beleza e funcionalidade" }
+              ]} 
+            />
+
             {/* Introdução */}
             <div className="prose prose-lg max-w-none mb-12">
               <p className="text-xl leading-relaxed text-foreground font-body mb-6">
@@ -899,8 +909,14 @@ const SistemaCaptacaoAgua = () => {
               </CardContent>
             </Card>
 
+            {/* Artigos Relacionados */}
+            <RelatedArticles 
+              currentLink="/sistema-captacao-agua-beleza-funcionalidade" 
+              category="Criar" 
+            />
+
             {/* Autor */}
-            <section className="mt-12 pt-8 border-t border-border">
+            <section className="mt-16 pt-8 border-t border-border">
               <AuthorCard variant="compact" />
             </section>
 

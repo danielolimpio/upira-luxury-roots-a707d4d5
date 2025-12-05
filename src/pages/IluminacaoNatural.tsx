@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Sun, Home, Lightbulb, Eye, Leaf, TrendingDown, Heart, Sparkles, Wind, Shield, MapPin, Trees, ArrowRight, CheckCircle2, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AuthorCard } from "@/components/AuthorCard";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { RelatedArticles } from "@/components/RelatedArticles";
 
 const IluminacaoNatural = () => {
   return (
@@ -61,6 +63,14 @@ const IluminacaoNatural = () => {
         </div>
 
         <article className="container mx-auto px-4 py-12 md:py-16 max-w-4xl">
+          {/* Breadcrumbs */}
+          <Breadcrumbs 
+            items={[
+              { label: "Criar", href: "/criar" },
+              { label: "Iluminação natural: arquitetura que conversa com o sol" }
+            ]} 
+          />
+
           {/* Title */}
           <header className="mb-8 md:mb-12">
             <div className="flex items-center gap-2 text-base text-muted-foreground mb-4 font-body">
@@ -625,8 +635,14 @@ const IluminacaoNatural = () => {
             </Card>
           </section>
 
+          {/* Artigos Relacionados */}
+          <RelatedArticles 
+            currentLink="/iluminacao-natural-arquitetura-conversa-com-sol" 
+            category="Criar" 
+          />
+
           {/* Autor */}
-          <section className="mt-8 pt-8 border-t border-border">
+          <section className="mt-16 pt-8 border-t border-border">
             <AuthorCard variant="compact" />
           </section>
 

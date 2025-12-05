@@ -24,6 +24,8 @@ import {
 } from "lucide-react";
 import fogoImage from "@/assets/category-criar.jpg";
 import { AuthorCard } from "@/components/AuthorCard";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { RelatedArticles } from "@/components/RelatedArticles";
 
 const CozinharComFogo = () => {
   return (
@@ -115,6 +117,14 @@ const CozinharComFogo = () => {
         <article className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+
+              {/* Breadcrumbs */}
+              <Breadcrumbs 
+                items={[
+                  { label: "Comer", href: "/comer" },
+                  { label: "Cozinhar com fogo: guia prático para pratos gourmet" }
+                ]} 
+              />
               
               {/* Introduction */}
               <section className="space-y-6 mb-12">
@@ -697,8 +707,14 @@ const CozinharComFogo = () => {
                 </div>
               </section>
 
+              {/* Artigos Relacionados */}
+              <RelatedArticles 
+                currentLink="/cozinhar-com-fogo-guia-pratico" 
+                category="Comer" 
+              />
+
               {/* Autor */}
-              <section className="mt-12 pt-8 border-t border-border">
+              <section className="mt-16 pt-8 border-t border-border">
                 <AuthorCard variant="compact" />
               </section>
             </div>
