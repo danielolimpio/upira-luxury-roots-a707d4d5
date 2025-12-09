@@ -2,6 +2,19 @@
   RewriteEngine On
   RewriteBase /
   
+  # Excluir arquivos estáticos essenciais do redirecionamento SPA
+  RewriteRule ^ads\.txt$ - [L]
+  RewriteRule ^robots\.txt$ - [L]
+  RewriteRule ^sitemap\.xml$ - [L]
+  RewriteRule ^favicon\.ico$ - [L]
+  RewriteRule ^favicon\.png$ - [L]
+  RewriteRule ^apple-touch-icon\.png$ - [L]
+  RewriteRule ^og-image\.jpg$ - [L]
+  RewriteRule ^\.well-known/ - [L]
+  
+  # Excluir extensões de arquivos comuns
+  RewriteRule \.(txt|xml|json|ico|png|jpg|jpeg|gif|svg|webp|css|js|woff|woff2|ttf|eot|map)$ - [L]
+  
   # Se não for arquivo nem diretório, redireciona para index.html
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
