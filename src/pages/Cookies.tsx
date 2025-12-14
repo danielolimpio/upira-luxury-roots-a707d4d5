@@ -1,9 +1,33 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Cookie, Settings, Eye, Target, Shield, Mail } from "lucide-react";
+import { 
+  Cookie, 
+  Settings, 
+  Eye, 
+  Target, 
+  Shield, 
+  Mail, 
+  Globe, 
+  MonitorSmartphone,
+  BarChart3,
+  ExternalLink,
+  RefreshCw,
+  HelpCircle,
+  Smartphone,
+  ListChecks,
+  ChevronRight
+} from "lucide-react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 const Cookies = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -28,245 +52,247 @@ const Cookies = () => {
                 Política de Cookies
               </h1>
               <p className="font-body text-lg text-muted-foreground">
-                Atualizada em 15 de novembro de 2025
+                Última atualização: 14 de dezembro de 2025
+              </p>
+            </div>
+
+            {/* Introduction Card */}
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-xl p-6 md:p-8 mb-10">
+              <p className="font-body text-lg text-foreground leading-relaxed">
+                Esta Política de Cookies explica como <strong>UPIRA</strong> ("Empresa", "nós", "nos" e "nossos") utiliza cookies e tecnologias semelhantes para reconhecê-lo quando você visita nosso site em{" "}
+                <a href="https://upira.com.br" className="text-primary hover:underline font-medium">https://upira.com.br</a> (Site). Ele explica o que são essas tecnologias e por que as usamos, bem como seus direitos de controlar nosso uso delas.
+              </p>
+              <p className="font-body text-base text-muted-foreground leading-relaxed mt-4">
+                Em alguns casos, podemos usar cookies para coletar informações pessoais, ou essas informações podem se tornar pessoais se as combinarmos com outras informações.
               </p>
             </div>
 
             {/* Content */}
-            <div className="prose prose-upira max-w-none space-y-8">
-              <section className="space-y-4">
-                <p className="font-body text-lg text-foreground leading-relaxed">
-                  Esta Política de Cookies explica como a <strong>Upira</strong> utiliza cookies e tecnologias similares no site <strong>upira.com.br</strong> ("Site"). Ao continuar navegando no Site, você concorda com o uso de cookies conforme descrito nesta política.
-                </p>
-              </section>
-
-              <section className="space-y-4">
+            <div className="prose prose-upira max-w-none space-y-10">
+              
+              {/* O que são cookies */}
+              <section id="o-que-sao-cookies" className="space-y-4">
                 <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
-                  <Cookie className="h-6 w-6 text-primary" />
-                  1. O que são Cookies?
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Cookie className="h-6 w-6 text-primary" />
+                  </div>
+                  O que são cookies?
                 </h2>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Cookies são pequenos arquivos de texto armazenados no seu dispositivo (computador, tablet ou smartphone) quando você visita um site. Eles permitem que o site reconheça seu dispositivo e lembre de informações sobre sua visita, como suas preferências de idioma, configurações e atividades de navegação.
-                </p>
-                <p className="font-body text-base text-muted-foreground leading-relaxed mt-4">
-                  Os cookies desempenham um papel essencial na melhoria da sua experiência online, tornando a navegação mais rápida, personalizada e eficiente.
-                </p>
-              </section>
-
-              <section className="space-y-4">
-                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
-                  <Settings className="h-6 w-6 text-primary" />
-                  2. Tipos de Cookies que Utilizamos
-                </h2>
-                
-                <h3 className="font-heading text-xl font-medium text-foreground mt-6">
-                  2.1. Cookies Essenciais (Necessários)
-                </h3>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Esses cookies são fundamentais para o funcionamento do Site e não podem ser desativados. Eles permitem que você navegue pelo Site e use recursos essenciais, como áreas seguras e carrinho de compras (quando aplicável).
-                </p>
-                <ul className="list-disc list-inside space-y-2 font-body text-base text-muted-foreground pl-4 mt-2">
-                  <li><strong>Finalidade:</strong> Garantir a funcionalidade básica do Site</li>
-                  <li><strong>Exemplos:</strong> Cookies de sessão, cookies de segurança</li>
-                  <li><strong>Duração:</strong> Sessão ou até 12 meses</li>
-                </ul>
-
-                <h3 className="font-heading text-xl font-medium text-foreground mt-6">
-                  2.2. Cookies de Desempenho e Análise
-                </h3>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Esses cookies coletam informações sobre como os visitantes usam o Site, como páginas mais visitadas, tempo de permanência e links clicados. Os dados são agregados e anônimos, ajudando-nos a melhorar o desempenho do Site.
-                </p>
-                <ul className="list-disc list-inside space-y-2 font-body text-base text-muted-foreground pl-4 mt-2">
-                  <li><strong>Finalidade:</strong> Analisar o tráfego e comportamento dos usuários</li>
-                  <li><strong>Exemplos:</strong> Google Analytics</li>
-                  <li><strong>Duração:</strong> Até 24 meses</li>
-                </ul>
-
-                <h3 className="font-heading text-xl font-medium text-foreground mt-6">
-                  2.3. Cookies de Funcionalidade
-                </h3>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Esses cookies permitem que o Site se lembre de escolhas que você faz (como seu nome de usuário, idioma ou região) e forneçam recursos aprimorados e mais personalizados.
-                </p>
-                <ul className="list-disc list-inside space-y-2 font-body text-base text-muted-foreground pl-4 mt-2">
-                  <li><strong>Finalidade:</strong> Lembrar suas preferências e personalizações</li>
-                  <li><strong>Exemplos:</strong> Preferências de exibição, idioma</li>
-                  <li><strong>Duração:</strong> Até 12 meses</li>
-                </ul>
-
-                <h3 className="font-heading text-xl font-medium text-foreground mt-6">
-                  2.4. Cookies de Publicidade e Marketing
-                </h3>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Esses cookies são usados para exibir anúncios relevantes para você e seus interesses. Eles também limitam o número de vezes que você vê um anúncio e nos ajudam a medir a eficácia das campanhas publicitárias.
-                </p>
-                <ul className="list-disc list-inside space-y-2 font-body text-base text-muted-foreground pl-4 mt-2">
-                  <li><strong>Finalidade:</strong> Exibir anúncios personalizados e medir desempenho</li>
-                  <li><strong>Exemplos:</strong> Google AdSense, DoubleClick</li>
-                  <li><strong>Duração:</strong> Até 24 meses</li>
-                </ul>
-                <p className="font-body text-base text-muted-foreground leading-relaxed mt-4">
-                  <strong>Nota:</strong> Utilizamos o Google AdSense para monetizar nosso Site. O Google pode usar cookies para coletar informações sobre suas visitas ao nosso Site e a outros sites, a fim de fornecer anúncios sobre produtos e serviços de seu interesse. Para mais informações sobre como o Google usa dados, visite a <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Política de Privacidade do Google</a>.
-                </p>
-              </section>
-
-              <section className="space-y-4">
-                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
-                  <Target className="h-6 w-6 text-primary" />
-                  3. Cookies de Terceiros
-                </h2>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Alguns cookies no nosso Site são colocados por terceiros, como:
-                </p>
-                <ul className="list-disc list-inside space-y-2 font-body text-base text-muted-foreground pl-4">
-                  <li><strong>Google Analytics:</strong> Para analisar o uso do Site e gerar relatórios sobre atividades dos visitantes.</li>
-                  <li><strong>Google AdSense:</strong> Para exibir anúncios personalizados com base em seus interesses e histórico de navegação.</li>
-                  <li><strong>Redes sociais:</strong> Cookies de plataformas como Facebook, Instagram e Twitter para facilitar o compartilhamento de conteúdo.</li>
-                </ul>
-                <p className="font-body text-base text-muted-foreground leading-relaxed mt-4">
-                  Esses cookies são controlados pelos respectivos terceiros e estão sujeitos às suas próprias políticas de privacidade. Não temos controle sobre como eles coletam ou usam informações.
-                </p>
-              </section>
-
-              <section className="space-y-4">
-                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
-                  <Eye className="h-6 w-6 text-primary" />
-                  4. Como Usamos os Cookies
-                </h2>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Utilizamos cookies para:
-                </p>
-                <ul className="list-disc list-inside space-y-2 font-body text-base text-muted-foreground pl-4">
-                  <li><strong>Melhorar a funcionalidade:</strong> Garantir que o Site funcione corretamente e fornecer recursos personalizados.</li>
-                  <li><strong>Analisar o desempenho:</strong> Entender como os visitantes interagem com o Site para melhorar conteúdo e navegação.</li>
-                  <li><strong>Personalizar a experiência:</strong> Lembrar suas preferências e exibir conteúdo relevante.</li>
-                  <li><strong>Exibir anúncios:</strong> Mostrar anúncios que sejam relevantes para seus interesses através do Google AdSense.</li>
-                  <li><strong>Medir eficácia:</strong> Avaliar o desempenho de campanhas de marketing e anúncios.</li>
-                </ul>
-              </section>
-
-              <section className="space-y-4">
-                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
-                  <Settings className="h-6 w-6 text-primary" />
-                  5. Como Gerenciar e Desativar Cookies
-                </h2>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Você tem o direito de aceitar ou recusar cookies. A maioria dos navegadores aceita cookies automaticamente, mas você pode modificar as configurações do seu navegador para recusar cookies, se preferir.
-                </p>
-
-                <h3 className="font-heading text-xl font-medium text-foreground mt-6">
-                  5.1. Configurações do Navegador
-                </h3>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Você pode gerenciar cookies através das configurações do seu navegador:
-                </p>
-                <ul className="list-disc list-inside space-y-2 font-body text-base text-muted-foreground pl-4">
-                  <li><strong>Google Chrome:</strong> Configurações → Privacidade e segurança → Cookies e outros dados de sites</li>
-                  <li><strong>Mozilla Firefox:</strong> Opções → Privacidade e segurança → Cookies e dados de sites</li>
-                  <li><strong>Safari:</strong> Preferências → Privacidade → Cookies e dados de sites</li>
-                  <li><strong>Microsoft Edge:</strong> Configurações → Cookies e permissões de site</li>
-                </ul>
-
-                <h3 className="font-heading text-xl font-medium text-foreground mt-6">
-                  5.2. Ferramentas de Opt-Out
-                </h3>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Para desativar cookies de publicidade personalizados:
-                </p>
-                <ul className="list-disc list-inside space-y-2 font-body text-base text-muted-foreground pl-4">
-                  <li><strong>Google Ads:</strong> Acesse <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google Ads Settings</a> para personalizar suas preferências de anúncios.</li>
-                  <li><strong>Your Online Choices:</strong> Visite <a href="http://www.youronlinechoices.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.youronlinechoices.com</a> para gerenciar cookies de publicidade comportamental.</li>
-                  <li><strong>Network Advertising Initiative:</strong> Acesse <a href="https://optout.networkadvertising.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">NAI Opt-Out</a> para desativar cookies de marketing.</li>
-                </ul>
-
-                <h3 className="font-heading text-xl font-medium text-foreground mt-6">
-                  5.3. Consequências de Desativar Cookies
-                </h3>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Ao desativar cookies, você pode:
-                </p>
-                <ul className="list-disc list-inside space-y-2 font-body text-base text-muted-foreground pl-4">
-                  <li>Perder acesso a certos recursos e funcionalidades do Site</li>
-                  <li>Ter uma experiência de navegação menos personalizada</li>
-                  <li>Precisar reinserir informações de login ou preferências a cada visita</li>
-                  <li>Ver anúncios menos relevantes (mas ainda verá anúncios)</li>
-                </ul>
-              </section>
-
-              <section className="space-y-4">
-                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
-                  <Shield className="h-6 w-6 text-primary" />
-                  6. Outras Tecnologias de Rastreamento
-                </h2>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Além de cookies, podemos usar outras tecnologias para coletar informações, incluindo:
-                </p>
-                <ul className="list-disc list-inside space-y-2 font-body text-base text-muted-foreground pl-4">
-                  <li><strong>Web beacons (pixels):</strong> Pequenas imagens transparentes que nos ajudam a entender como você interage com e-mails e páginas.</li>
-                  <li><strong>Local storage:</strong> Tecnologia que armazena dados localmente no seu navegador para melhorar o desempenho.</li>
-                  <li><strong>Session storage:</strong> Dados temporários armazenados durante sua sessão de navegação.</li>
-                </ul>
-              </section>
-
-              <section className="space-y-4">
-                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
-                  <Eye className="h-6 w-6 text-primary" />
-                  7. Cookies e Privacidade
-                </h2>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  O uso de cookies está em conformidade com nossa <a href="/privacidade" className="text-primary hover:underline">Política de Privacidade</a> e com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).
-                </p>
-                <p className="font-body text-base text-muted-foreground leading-relaxed mt-4">
-                  Os dados coletados através de cookies são tratados de forma segura e confidencial. Não compartilhamos informações pessoais com terceiros sem seu consentimento, exceto quando exigido por lei.
-                </p>
-              </section>
-
-              <section className="space-y-4">
-                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
-                  <Settings className="h-6 w-6 text-primary" />
-                  8. Atualizações desta Política
-                </h2>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Podemos atualizar esta Política de Cookies periodicamente para refletir mudanças em nossas práticas ou na legislação aplicável. A versão mais recente estará sempre disponível nesta página, com a data da última atualização claramente indicada.
-                </p>
-                <p className="font-body text-base text-muted-foreground leading-relaxed mt-4">
-                  Recomendamos que você revise esta política regularmente para se manter informado sobre como usamos cookies.
-                </p>
-              </section>
-
-              <section className="space-y-4">
-                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
-                  <Mail className="h-6 w-6 text-primary" />
-                  9. Contato
-                </h2>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  Se você tiver dúvidas ou preocupações sobre o uso de cookies no nosso Site, entre em contato conosco:
-                </p>
-                <div className="bg-muted/30 p-6 rounded-lg mt-4 space-y-2">
-                  <p className="font-body text-base text-foreground"><strong>Upira</strong></p>
-                  <p className="font-body text-base text-muted-foreground">
-                    <strong>E-mail:</strong> <a href="mailto:contato@upira.com.br" className="text-primary hover:underline">contato@upira.com.br</a>
+                <div className="bg-muted/30 border border-border/50 rounded-xl p-6">
+                  <p className="font-body text-base text-muted-foreground leading-relaxed">
+                    Os cookies são pequenos arquivos de dados que são armazenados no seu computador ou dispositivo móvel quando você visita um site. Os cookies são amplamente utilizados pelos proprietários de sites para que seus sites funcionem ou funcionem de forma mais eficiente, além de fornecerem informações para relatórios.
                   </p>
-                  <p className="font-body text-base text-muted-foreground">
-                    <strong>Telefone:</strong> <a href="tel:+5512982519116" className="text-primary hover:underline">(12) 98251-9116</a>
-                  </p>
-                  <p className="font-body text-base text-muted-foreground">
-                    <strong>Endereço:</strong> Av. Julia Freire, 1200 - João Pessoa - PB/Brasil
+                  <p className="font-body text-base text-muted-foreground leading-relaxed mt-4">
+                    Cookies definidos pelo proprietário do site (neste caso, <strong className="text-foreground">UPIRA</strong>) são chamados de "cookies primários". Os cookies definidos por terceiros que não o proprietário do site são chamados de "cookies de terceiros". Os cookies de terceiros permitem que recursos ou funcionalidades de terceiros sejam fornecidos no site ou por meio dele (por exemplo, publicidade, conteúdo interativo e análises). Os terceiros que definem esses cookies podem reconhecer seu computador tanto quando ele visita o site em questão quanto quando visita outros sites.
                   </p>
                 </div>
               </section>
 
-              <section className="bg-primary/5 p-6 rounded-lg mt-8">
-                <p className="font-body text-base text-foreground text-center leading-relaxed">
-                  Ao continuar navegando no nosso Site, você concorda com o uso de cookies conforme descrito nesta Política de Cookies.<br />
-                  <strong>Última atualização: 15 de novembro de 2025</strong>
-                </p>
+              {/* Por que usamos cookies */}
+              <section id="por-que-usamos" className="space-y-4">
+                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <HelpCircle className="h-6 w-6 text-primary" />
+                  </div>
+                  Por que usamos cookies?
+                </h2>
+                <div className="bg-muted/30 border border-border/50 rounded-xl p-6">
+                  <p className="font-body text-base text-muted-foreground leading-relaxed">
+                    Usamos cookies próprios e de terceiros por diversos motivos. Alguns cookies são necessários por razões técnicas para que nosso site funcione, e nos referimos a eles como cookies "essenciais" ou "estritamente necessários". Outros cookies também nos permitem rastrear e direcionar os interesses de nossos usuários para aprimorar a experiência em nossas propriedades online. Terceiros utilizam cookies através do nosso site para fins de publicidade, análise e outros. Isso será descrito com mais detalhes abaixo.
+                  </p>
+                </div>
               </section>
+
+              {/* Como posso controlar os cookies */}
+              <section id="controlar-cookies" className="space-y-4">
+                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Settings className="h-6 w-6 text-primary" />
+                  </div>
+                  Como posso controlar os cookies?
+                </h2>
+                <div className="bg-muted/30 border border-border/50 rounded-xl p-6 space-y-4">
+                  <p className="font-body text-base text-muted-foreground leading-relaxed">
+                    Você tem o direito de decidir se aceita ou rejeita cookies. Você pode exercer seus direitos relacionados a cookies definindo suas preferências no Gerenciador de Consentimento de Cookies. O Gerenciador de Consentimento de Cookies permite que você selecione quais categorias de cookies aceita ou rejeita. Cookies essenciais não podem ser rejeitados, pois são estritamente necessários para fornecer os serviços.
+                  </p>
+                  <p className="font-body text-base text-muted-foreground leading-relaxed">
+                    O Gerenciador de Consentimento de Cookies pode ser encontrado no banner de notificação e em nosso site. Se você optar por rejeitar os cookies, ainda poderá usar nosso site, embora seu acesso a algumas funcionalidades e áreas do site possa ser restrito. Você também pode configurar ou alterar as opções do seu navegador para aceitar ou recusar cookies.
+                  </p>
+                  <p className="font-body text-base text-muted-foreground leading-relaxed">
+                    Os tipos específicos de cookies próprios e de terceiros utilizados em nosso site e suas respectivas finalidades estão descritos na tabela abaixo (observe que os cookies específicos utilizados podem variar dependendo das Propriedades Online que você visitar).
+                  </p>
+                </div>
+              </section>
+
+              {/* Como posso controlar os cookies no meu navegador */}
+              <section id="controlar-navegador" className="space-y-4">
+                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <MonitorSmartphone className="h-6 w-6 text-primary" />
+                  </div>
+                  Como posso controlar os cookies no meu navegador?
+                </h2>
+                <div className="bg-muted/30 border border-border/50 rounded-xl p-6 space-y-4">
+                  <p className="font-body text-base text-muted-foreground leading-relaxed">
+                    Como os métodos para recusar cookies através das configurações do seu navegador variam de navegador para navegador, recomendamos que você consulte o menu de ajuda do seu navegador para obter mais informações. A seguir, informações sobre como gerenciar cookies nos navegadores mais populares:
+                  </p>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+                    <div className="flex items-center gap-2 p-3 bg-background rounded-lg border border-border/30">
+                      <ChevronRight className="h-4 w-4 text-primary" />
+                      <span className="font-body text-sm text-foreground">Chrome</span>
+                    </div>
+                    <div className="flex items-center gap-2 p-3 bg-background rounded-lg border border-border/30">
+                      <ChevronRight className="h-4 w-4 text-primary" />
+                      <span className="font-body text-sm text-foreground">Internet Explorer</span>
+                    </div>
+                    <div className="flex items-center gap-2 p-3 bg-background rounded-lg border border-border/30">
+                      <ChevronRight className="h-4 w-4 text-primary" />
+                      <span className="font-body text-sm text-foreground">Firefox</span>
+                    </div>
+                    <div className="flex items-center gap-2 p-3 bg-background rounded-lg border border-border/30">
+                      <ChevronRight className="h-4 w-4 text-primary" />
+                      <span className="font-body text-sm text-foreground">Safari</span>
+                    </div>
+                    <div className="flex items-center gap-2 p-3 bg-background rounded-lg border border-border/30">
+                      <ChevronRight className="h-4 w-4 text-primary" />
+                      <span className="font-body text-sm text-foreground">Edge</span>
+                    </div>
+                    <div className="flex items-center gap-2 p-3 bg-background rounded-lg border border-border/30">
+                      <ChevronRight className="h-4 w-4 text-primary" />
+                      <span className="font-body text-sm text-foreground">Opera</span>
+                    </div>
+                  </div>
+                  <p className="font-body text-base text-muted-foreground leading-relaxed mt-4">
+                    Além disso, a maioria das redes de publicidade oferece uma maneira de desativar a publicidade direcionada. Para obter mais informações, visite:
+                  </p>
+                  <div className="space-y-2 mt-3">
+                    <a href="https://digitaladvertisingalliance.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline font-body text-base">
+                      <ExternalLink className="h-4 w-4" />
+                      Aliança de Publicidade Digital
+                    </a>
+                    <a href="https://youradchoices.ca" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline font-body text-base">
+                      <ExternalLink className="h-4 w-4" />
+                      Aliança de Publicidade Digital do Canadá
+                    </a>
+                    <a href="https://edaa.eu" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline font-body text-base">
+                      <ExternalLink className="h-4 w-4" />
+                      Aliança Europeia de Publicidade Digital Interativa
+                    </a>
+                  </div>
+                </div>
+              </section>
+
+              {/* Web Beacons */}
+              <section id="web-beacons" className="space-y-4">
+                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Eye className="h-6 w-6 text-primary" />
+                  </div>
+                  E quanto a outras tecnologias de rastreamento, como os web beacons?
+                </h2>
+                <div className="bg-muted/30 border border-border/50 rounded-xl p-6">
+                  <p className="font-body text-base text-muted-foreground leading-relaxed">
+                    Os cookies não são a única forma de reconhecer ou rastrear visitantes de um site. Podemos usar outras tecnologias semelhantes de tempos em tempos, como web beacons (às vezes chamados de "pixels de rastreamento" ou "gifs transparentes"). Esses são pequenos arquivos gráficos que contêm um identificador exclusivo que nos permite reconhecer quando alguém visitou nosso site ou abriu um e-mail que os incluímos nos permite, por exemplo, monitorar os padrões de tráfego de usuários de uma página para outra dentro de um site, enviar ou interagir com cookies, entender se você chegou ao site por meio de um anúncio online exibido em um site de terceiros, melhorar o desempenho do site e medir o sucesso de campanhas de marketing por e-mail. Em muitos casos, essas tecnologias dependem de cookies para funcionar corretamente, portanto, recusar cookies prejudicará seu funcionamento.
+                  </p>
+                </div>
+              </section>
+
+              {/* Flash Cookies */}
+              <section id="flash-cookies" className="space-y-4">
+                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Smartphone className="h-6 w-6 text-primary" />
+                  </div>
+                  Você usa cookies Flash ou objetos compartilhados locais?
+                </h2>
+                <div className="bg-muted/30 border border-border/50 rounded-xl p-6 space-y-4">
+                  <p className="font-body text-base text-muted-foreground leading-relaxed">
+                    Os sites também podem usar os chamados "Flash Cookies" (também conhecidos como Objetos Compartilhados Locais ou "LSOs") para, entre outras coisas, coletar e armazenar informações sobre o seu uso de nossos serviços, prevenção de fraudes e para outras operações do site.
+                  </p>
+                  <p className="font-body text-base text-muted-foreground leading-relaxed">
+                    Se você não deseja que cookies Flash sejam armazenados em seu computador, pode ajustar as configurações do seu Flash Player para bloquear o armazenamento de cookies Flash usando as ferramentas contidas no Painel de Configurações de Armazenamento do Site. Você também pode controlar os cookies Flash acessando o Painel de Configurações de Armazenamento Global e seguindo as instruções (que podem incluir instruções que explicam, por exemplo, como excluir cookies Flash existentes (referidos como "Informações" no site da Macromedia), como impedir que objetos locais compartilhados (LSOs) do Flash sejam colocados em seu computador sem sua permissão e (para o Flash Player 8 e versões posteriores) como bloquear cookies Flash que não sejam enviados pelo operador da página que você está visitando no momento).
+                  </p>
+                  <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg p-4 mt-4">
+                    <p className="font-body text-sm text-foreground leading-relaxed">
+                      <strong>Atenção:</strong> Configurar o Flash Player para restringir ou limitar a aceitação de cookies Flash pode reduzir ou impedir a funcionalidade de alguns aplicativos Flash, incluindo, potencialmente, aplicativos Flash usados em conexão com nossos serviços ou conteúdo online.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Publicidade direcionada */}
+              <section id="publicidade-direcionada" className="space-y-4">
+                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Target className="h-6 w-6 text-primary" />
+                  </div>
+                  Você veicula publicidade direcionada?
+                </h2>
+                <div className="bg-muted/30 border border-border/50 rounded-xl p-6">
+                  <p className="font-body text-base text-muted-foreground leading-relaxed">
+                    Terceiros podem instalar cookies no seu computador ou dispositivo móvel para exibir anúncios através do nosso site. Essas empresas podem usar informações sobre suas visitas a este e outros sites para fornecer anúncios relevantes sobre produtos e serviços que possam ser do seu interesse. Elas também podem usar tecnologia para medir a eficácia dos anúncios. Isso pode ser feito por meio de cookies ou web beacons, que coletam informações sobre suas visitas a este e outros sites para exibir anúncios relevantes sobre produtos e serviços que possam ser do seu interesse. As informações coletadas por meio desse processo não permitem que nós ou terceiros identifiquemos seu nome, dados de contato ou outras informações que o identifiquem diretamente, a menos que você opte por fornecê-las.
+                  </p>
+                </div>
+              </section>
+
+              {/* Atualizações */}
+              <section id="atualizacoes" className="space-y-4">
+                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <RefreshCw className="h-6 w-6 text-primary" />
+                  </div>
+                  Com que frequência você atualizará esta Política de Cookies?
+                </h2>
+                <div className="bg-muted/30 border border-border/50 rounded-xl p-6">
+                  <p className="font-body text-base text-muted-foreground leading-relaxed">
+                    Podemos atualizar esta Política de Cookies periodicamente para refletir, por exemplo, alterações nos cookies que utilizamos ou por outros motivos operacionais, legais ou regulamentares. Portanto, visite esta Política de Cookies regularmente para se manter informado sobre o nosso uso de cookies e tecnologias relacionadas.
+                  </p>
+                  <p className="font-body text-base text-muted-foreground leading-relaxed mt-4">
+                    A data no topo desta Política de Cookies indica quando ela foi atualizada pela última vez.
+                  </p>
+                </div>
+              </section>
+
+              {/* Contato */}
+              <section id="contato" className="space-y-4">
+                <h2 className="font-heading text-2xl font-semibold text-foreground flex items-center gap-3">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Mail className="h-6 w-6 text-primary" />
+                  </div>
+                  Onde posso obter mais informações?
+                </h2>
+                <div className="bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-xl p-6 space-y-4">
+                  <p className="font-body text-base text-muted-foreground leading-relaxed">
+                    Se você tiver alguma dúvida sobre o nosso uso de cookies ou outras tecnologias, por favor, entre em contato conosco:
+                  </p>
+                  <div className="bg-background rounded-lg p-6 space-y-3">
+                    <p className="font-heading text-xl font-semibold text-foreground">UPIRA</p>
+                    <div className="space-y-2">
+                      <p className="font-body text-base text-muted-foreground flex items-center gap-2">
+                        <Mail className="h-4 w-4 text-primary" />
+                        <strong>E-mail:</strong>{" "}
+                        <a href="mailto:contato@upira.com.br" className="text-primary hover:underline">contato@upira.com.br</a>
+                      </p>
+                      <p className="font-body text-base text-muted-foreground flex items-start gap-2">
+                        <Globe className="h-4 w-4 text-primary mt-1" />
+                        <span>
+                          <strong>Endereço:</strong> Av. Júlia Freire, 1200 - Expedicionários, João Pessoa - PB, 58041-000, Brasil
+                        </span>
+                      </p>
+                      <p className="font-body text-base text-muted-foreground flex items-center gap-2">
+                        <Smartphone className="h-4 w-4 text-primary" />
+                        <strong>Telefone:</strong>{" "}
+                        <a href="tel:+5512982519116" className="text-primary hover:underline">(+55) 12 98251-9116</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
             </div>
           </article>
         </main>
-        
+
         <Footer />
       </div>
     </>
