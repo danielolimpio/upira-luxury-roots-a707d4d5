@@ -1,8 +1,12 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  
-  # Excluir arquivos estáticos essenciais do redirecionamento SPA
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Excluir arquivos estáticos essenciais
   RewriteRule ^ads\.txt$ - [L]
   RewriteRule ^robots\.txt$ - [L]
   RewriteRule ^sitemap\.xml$ - [L]
@@ -10,15 +14,26 @@
   RewriteRule ^favicon\.png$ - [L]
   RewriteRule ^apple-touch-icon\.png$ - [L]
   RewriteRule ^og-image\.jpg$ - [L]
+  RewriteRule ^static-styles\.css$ - [L]
   RewriteRule ^\.well-known/ - [L]
-  
+
   # Excluir extensões de arquivos comuns
-  RewriteRule \.(txt|xml|json|ico|png|jpg|jpeg|gif|svg|webp|css|js|woff|woff2|ttf|eot|map)$ - [L]
-  
-  # Se não for arquivo nem diretório, redireciona para index.html
+  RewriteRule \.(txt|xml|json|ico|png|jpg|jpeg|gif|svg|webp|css|js|woff|woff2|ttf|eot|map|html)$ - [L]
+
+  # Add trailing slash to directories
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteRule ^(.*)$ /$1/ [L,R=301]
+
+  # Serve index.html from directory if exists
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.*)$ $1/index.html [L]
+
+  # NO fallback to SPA - return 404 for non-existent pages
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+  RewriteRule . - [R=404,L]
 </IfModule>
 
 # Segurança
@@ -41,6 +56,6 @@
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
 </IfModule>
