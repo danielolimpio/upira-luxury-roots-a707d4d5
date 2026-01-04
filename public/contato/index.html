@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Upira">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="contato upira, fale conosco, off-grid, sustentabilidade">
+  
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  <title>Contato - Upira | Fale Conosco</title>
+  <meta name="description" content="Entre em contato com a equipe Upira. Tire suas dúvidas sobre vida off-grid, sustentabilidade e consumo consciente.">
+  <link rel="canonical" href="https://upira.com.br/contato/">
+  
+  <meta property="og:title" content="Contato - Upira">
+  <meta property="og:description" content="Entre em contato com a equipe Upira. Tire suas dúvidas sobre vida off-grid e sustentabilidade.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://upira.com.br/contato/">
+  <meta property="og:image" content="https://upira.com.br/og-image.jpg">
+  <meta property="og:locale" content="pt_BR">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static-styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="container header-content">
+      <a href="/" class="header-logo">
+        <img src="/assets/logo-upira.png" alt="Upira">
+      </a>
+      <div class="header-nav">
+        <a href="/">Home</a>
+        <a href="/viver/">Viver</a>
+        <a href="/comer/">Comer</a>
+        <a href="/criar/">Criar</a>
+        <a href="/explorar/">Explorar</a>
+        <a href="/cultivar/">Cultivar</a>
+        <a href="/sobre/">Sobre</a>
+        <a href="/quiz/">Quiz</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contato/" class="active">Contato</a>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="/">Home</a>
+      <a href="/viver/">Viver</a>
+      <a href="/comer/">Comer</a>
+      <a href="/criar/">Criar</a>
+      <a href="/explorar/">Explorar</a>
+      <a href="/cultivar/">Cultivar</a>
+      <a href="/sobre/">Sobre</a>
+      <a href="/quiz/">Quiz</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contato/">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-12">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary); margin-bottom: 1rem;">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <h1 class="font-heading" style="margin-bottom: 1rem;">Entre em Contato</h1>
+          <p class="font-body" style="font-size: 1.25rem; color: var(--muted-foreground); max-width: 36rem; margin: 0 auto;">
+            Tem alguma dúvida, sugestão ou quer compartilhar sua experiência? Adoramos ouvir você.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; max-width: 72rem; margin: 0 auto;">
+          <!-- Contact Form -->
+          <div class="card" style="padding: 2rem;">
+            <h2 class="font-heading" style="font-size: 1.5rem; margin-bottom: 1.5rem;">Envie uma mensagem</h2>
+            <form action="#" method="POST" onsubmit="alert('Obrigado pela mensagem! Entraremos em contato em breve.'); return false;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                  <label class="form-label" for="name">Nome</label>
+                  <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">E-mail</label>
+                  <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="subject">Assunto</label>
+                <input type="text" id="subject" name="subject" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Mensagem</label>
+                <textarea id="message" name="message" class="form-textarea" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensagem</button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+            <div class="card" style="padding: 1.5rem; text-align: center;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary); margin-bottom: 1rem;">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <h3 class="font-heading" style="font-size: 1.125rem; margin-bottom: 0.5rem;">E-mail</h3>
+              <a href="mailto:contato@upira.com.br" style="color: var(--muted-foreground);">contato@upira.com.br</a>
+            </div>
+            <div class="card" style="padding: 1.5rem; text-align: center;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary); margin-bottom: 1rem;">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <h3 class="font-heading" style="font-size: 1.125rem; margin-bottom: 0.5rem;">Telefone</h3>
+              <a href="tel:+5512982519116" style="color: var(--muted-foreground);">(12) 98251-9116</a>
+            </div>
+            <div class="card" style="padding: 1.5rem; text-align: center;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary); margin-bottom: 1rem;">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <h3 class="font-heading" style="font-size: 1.125rem; margin-bottom: 0.5rem;">Endereço</h3>
+              <p style="color: var(--muted-foreground); font-size: 0.875rem;">Av. Julia Freire, 1200 - Expedicionários<br>João Pessoa - PB, 58041-000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/"><img src="/assets/logo-upira.png" alt="Upira"></a>
+          <p class="font-body">Feito para quem escolhe viver bem.</p>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:contato@upira.com.br">contato@upira.com.br</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:+5512982519116">(12) 98251-9116</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Av. Julia Freire, 1200 - João Pessoa - PB/Brasil</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="font-heading">Explorar</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/sobre/">Sobre</a></li>
+            <li><a href="/quiz/">Quiz</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contato/">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="font-heading">Categorias</h3>
+          <ul>
+            <li><a href="/viver/">Viver</a></li>
+            <li><a href="/comer/">Comer</a></li>
+            <li><a href="/criar/">Criar</a></li>
+            <li><a href="/explorar/">Explorar</a></li>
+            <li><a href="/cultivar/">Cultivar</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="font-heading">Legal</h3>
+          <ul>
+            <li><a href="/privacidade/">Privacidade</a></li>
+            <li><a href="/termos/">Termos de Uso</a></li>
+            <li><a href="/cookies/">Política de Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="font-body">© Copyright 2025 | Upira.com.br | Todos os direitos reservados | Desenvolvido por <a href="https://danielolimpio.com" target="_blank" rel="noopener noreferrer">DanielOlimpio</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
