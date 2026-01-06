@@ -26,6 +26,9 @@ jobs:
       - name: Mostrar arquivos gerados
         run: ls -la dist/
 
+      - name: Validar sitemap vs arquivos
+        run: node scripts/validate-sitemap.js
+
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
