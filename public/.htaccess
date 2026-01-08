@@ -1,8 +1,20 @@
+# ============================================
+# CONFIGURAÇÃO SEO E SPA - UPIRA
+# ============================================
+
+# Forçar HTTPS
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Adicionar trailing slash para URLs limpas (opcional mas recomendado para SEO)
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
   
-  # Excluir arquivos estáticos essenciais do redirecionamento SPA
+  # Excluir arquivos estáticos essenciais do redirecionamento
   RewriteRule ^ads\.txt$ - [L]
   RewriteRule ^robots\.txt$ - [L]
   RewriteRule ^sitemap\.xml$ - [L]
@@ -13,34 +25,112 @@
   RewriteRule ^\.well-known/ - [L]
   
   # Excluir extensões de arquivos comuns
-  RewriteRule \.(txt|xml|json|ico|png|jpg|jpeg|gif|svg|webp|css|js|woff|woff2|ttf|eot|map)$ - [L]
+  RewriteRule \.(txt|xml|json|ico|png|jpg|jpeg|gif|svg|webp|css|js|woff|woff2|ttf|eot|map|pdf)$ - [L]
   
-  # Se não for arquivo nem diretório, redireciona para index.html
+  # SPA Fallback: Se não for arquivo nem diretório, redireciona para index.html
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
 
-# Segurança
+# ============================================
+# HEADERS DE SEGURANÇA
+# ============================================
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 </IfModule>
 
-# Compressão
+# ============================================
+# COMPRESSÃO GZIP
+# ============================================
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json application/xml
+  AddOutputFilterByType DEFLATE application/x-javascript application/xhtml+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
-# Cache
+# ============================================
+# CACHE DE NAVEGADOR
+# ============================================
 <IfModule mod_expires.c>
   ExpiresActive On
+  
+  # Imagens - 1 ano
   ExpiresByType image/jpg "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  
+  # Fontes - 1 ano
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  
+  # CSS e JS - 1 mês
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  
+  # HTML - 1 hora (para atualizações frequentes)
+  ExpiresByType text/html "access plus 1 hour"
+  
+  # XML e JSON - 1 dia
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType application/json "access plus 1 day"
+  ExpiresByType text/xml "access plus 1 day"
 </IfModule>
+
+# ============================================
+# CACHE-CONTROL HEADERS
+# ============================================
+<IfModule mod_headers.c>
+  # Arquivos estáticos imutáveis (com hash no nome)
+  <FilesMatch "\.(js|css|jpg|jpeg|png|gif|webp|svg|woff|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  
+  # HTML - cache curto para atualizações
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ============================================
+# TIPOS MIME
+# ============================================
+<IfModule mod_mime.c>
+  AddType application/javascript .js
+  AddType text/css .css
+  AddType image/svg+xml .svg
+  AddType image/webp .webp
+  AddType font/woff .woff
+  AddType font/woff2 .woff2
+  AddType application/json .json
+</IfModule>
+
+# ============================================
+# PREVENIR LISTAGEM DE DIRETÓRIOS
+# ============================================
+Options -Indexes
+
+# ============================================
+# PROTEÇÃO DE ARQUIVOS SENSÍVEIS
+# ============================================
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+<FilesMatch "\.(env|log|bak|config|sql)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>

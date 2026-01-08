@@ -25,6 +25,7 @@ const Viver = () => {
       featuredPosts={featuredPosts}
       quizTitle="Qual seu perfil off-grid?"
       quizLink="/quiz"
+      slug="viver"
     />
   );
 };

@@ -25,6 +25,7 @@ const Comer = () => {
       featuredPosts={featuredPosts}
       quizTitle="Que tipo de fogo combina com seu estilo?"
       quizLink="/quiz"
+      slug="comer"
     />
   );
 };
