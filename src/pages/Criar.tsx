@@ -25,6 +25,7 @@ const Criar = () => {
       featuredPosts={featuredPosts}
       quizTitle="Qual seu estilo de criação?"
       quizLink="/quiz"
+      slug="criar"
     />
   );
 };

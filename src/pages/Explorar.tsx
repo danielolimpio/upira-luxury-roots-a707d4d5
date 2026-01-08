@@ -25,6 +25,7 @@ const Explorar = () => {
       featuredPosts={featuredPosts}
       quizTitle="Seu consumo é inteligente?"
       quizLink="/quiz"
+      slug="explorar"
     />
   );
 };

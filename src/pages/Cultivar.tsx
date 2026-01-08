@@ -25,6 +25,7 @@ const Cultivar = () => {
       featuredPosts={featuredPosts}
       quizTitle="Qual ritual combina com você?"
       quizLink="/quiz"
+      slug="cultivar"
     />
   );
 };
