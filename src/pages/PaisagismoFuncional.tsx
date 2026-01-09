@@ -34,6 +34,7 @@ const PaisagismoFuncional = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Paisagismo funcional: jardins que trabalham por você | Upira</title>
         <meta 
           name="description" 
@@ -43,6 +44,7 @@ const PaisagismoFuncional = () => {
           name="keywords" 
           content="paisagismo funcional, jardim produtivo, horta urbana, plantas multifuncionais, permacultura, jardim sustentável, plantas repelentes, jardim comestível" 
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://upira.com.br/paisagismo-funcional-jardins-que-trabalham" />
         
         <meta property="og:title" content="Paisagismo funcional: jardins que trabalham por você" />
@@ -50,6 +52,8 @@ const PaisagismoFuncional = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://upira.com.br/paisagismo-funcional-jardins-que-trabalham" />
         <meta property="og:image" content="https://upira.com.br/og-image.jpg" />
+        <meta property="og:site_name" content="Upira" />
+        <meta property="og:locale" content="pt_BR" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Paisagismo funcional: jardins que trabalham por você" />

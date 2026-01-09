@@ -8,12 +8,14 @@ const Sobre = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Sobre o Upira | Raiz com Atitude - Vida Off-Grid com Luxo</title>
         <meta 
           name="description" 
           content="Conheça o Upira: inspiração prática para quem quer autonomia, conforto e elegância. Off-grid pode ser luxuoso. Raiz com atitude." 
         />
         <meta name="keywords" content="upira, sobre, off-grid, vida sustentável, autonomia, luxo sustentável, daniel olimpio" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://upira.com.br/sobre" />
         
         <meta property="og:title" content="Sobre o Upira | Raiz com Atitude" />
@@ -21,6 +23,28 @@ const Sobre = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://upira.com.br/sobre" />
         <meta property="og:image" content="https://upira.com.br/og-image.jpg" />
+        <meta property="og:site_name" content="Upira" />
+        <meta property="og:locale" content="pt_BR" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sobre o Upira | Raiz com Atitude" />
+        <meta name="twitter:description" content="Conheça o Upira: inspiração prática para quem quer autonomia, conforto e elegância." />
+        <meta name="twitter:image" content="https://upira.com.br/og-image.jpg" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "Sobre o Upira",
+            "description": "Conheça o Upira: inspiração prática para quem quer autonomia, conforto e elegância.",
+            "url": "https://upira.com.br/sobre",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Upira",
+              "url": "https://upira.com.br"
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-background">

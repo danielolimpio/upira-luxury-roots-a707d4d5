@@ -35,15 +35,26 @@ const DespensaOffGrid = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Como montar uma despensa off-grid que dura 6 meses | Upira</title>
         <meta name="description" content="Estratégias práticas e elegantes para organizar sua despensa com autonomia e sofisticação." />
         <meta name="keywords" content="despensa off-grid, autonomia alimentar, armazenamento de alimentos, vida rural, sustentabilidade" />
-        <link rel="canonical" href="https://upira.com/despensa-off-grid-6-meses" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://upira.com.br/despensa-off-grid-6-meses" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Como montar uma despensa off-grid que dura 6 meses" />
         <meta property="og:description" content="Estratégias práticas e elegantes para organizar sua despensa com autonomia e sofisticação." />
         <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://upira.com.br/despensa-off-grid-6-meses" />
+        <meta property="og:image" content="https://upira.com.br/og-image.jpg" />
+        <meta property="og:site_name" content="Upira" />
+        <meta property="og:locale" content="pt_BR" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Como montar uma despensa off-grid que dura 6 meses" />
+        <meta name="twitter:description" content="Estratégias práticas e elegantes para organizar sua despensa com autonomia e sofisticação." />
+        <meta name="twitter:image" content="https://upira.com.br/og-image.jpg" />
         
         {/* Schema.org */}
         <script type="application/ld+json">

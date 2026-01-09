@@ -24,10 +24,9 @@ Allow: /
 User-agent: Slackbot
 Allow: /
 
-# Bloquear páginas desnecessárias
+# Bloquear páginas desnecessárias (não bloquear JS para permitir renderização)
 Disallow: /api/
 Disallow: /*.json$
-Disallow: /assets/*.js$
 
 # Sitemap
 Sitemap: https://upira.com.br/sitemap.xml

@@ -33,6 +33,7 @@ const HabitosConsumo = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>5 hábitos de consumo que reduzem o estresse | Upira</title>
         <meta 
           name="description" 
@@ -42,6 +43,7 @@ const HabitosConsumo = () => {
           name="keywords" 
           content="hábitos de consumo, redução de estresse, bem-estar, consumo consciente, minimalismo, sustentabilidade, qualidade de vida, ansiedade financeira, experiências, slow living" 
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://upira.com.br/habitos-consumo-reduzem-estresse" />
         
         {/* Open Graph */}
@@ -49,9 +51,17 @@ const HabitosConsumo = () => {
         <meta property="og:description" content="Descubra práticas que trazem bem-estar genuíno sem sacrificar o conforto — e ainda ajudam você a viver com mais clareza, propósito e tranquilidade no dia a dia." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://upira.com.br/habitos-consumo-reduzem-estresse" />
+        <meta property="og:image" content="https://upira.com.br/og-image.jpg" />
+        <meta property="og:site_name" content="Upira" />
+        <meta property="og:locale" content="pt_BR" />
         <meta property="article:published_time" content="2025-11-12T00:00:00Z" />
         <meta property="article:author" content="Upira" />
         <meta property="article:section" content="Explorar" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="5 hábitos de consumo que reduzem o estresse | Upira" />
+        <meta name="twitter:description" content="Descubra práticas que trazem bem-estar genuíno sem sacrificar o conforto." />
+        <meta name="twitter:image" content="https://upira.com.br/og-image.jpg" />
         
         {/* Schema.org */}
         <script type="application/ld+json">

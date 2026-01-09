@@ -32,15 +32,26 @@ const CozinharComFogo = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Cozinhar com fogo: guia prático para pratos gourmet | Upira</title>
         <meta name="description" content="Do fogão à lenha à fogueira: técnicas refinadas para elevar sua culinária ao ar livre — sem abrir mão de sabor, sofisticação ou segurança." />
         <meta name="keywords" content="cozinhar com fogo, culinária ao ar livre, pratos gourmet, fogão à lenha, técnicas de cocção, fogueira, churrasco gourmet, lenha para cozinhar" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://upira.com.br/cozinhar-com-fogo-guia-pratico" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Cozinhar com fogo: guia prático para pratos gourmet | Upira" />
         <meta property="og:description" content="Do fogão à lenha à fogueira: técnicas refinadas para elevar sua culinária ao ar livre — sem abrir mão de sabor, sofisticação ou segurança." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://upira.com.br/cozinhar-com-fogo-guia-pratico" />
+        <meta property="og:image" content="https://upira.com.br/og-image.jpg" />
+        <meta property="og:site_name" content="Upira" />
+        <meta property="og:locale" content="pt_BR" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Cozinhar com fogo: guia prático para pratos gourmet | Upira" />
+        <meta name="twitter:description" content="Do fogão à lenha à fogueira: técnicas refinadas para elevar sua culinária ao ar livre." />
+        <meta name="twitter:image" content="https://upira.com.br/og-image.jpg" />
         
         {/* Schema.org */}
         <script type="application/ld+json">

@@ -61,18 +61,28 @@ const Blog = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Blog - Upira | Artigos sobre vida consciente e off-grid</title>
         <meta 
           name="description" 
           content="Explore nossos artigos sobre vida sustentável, consumo inteligente, culinária natural e práticas off-grid com luxo e propósito." 
         />
         <meta name="keywords" content="blog upira, vida off-grid, sustentabilidade, consumo consciente, culinária natural" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://upira.com.br/blog" />
         
         <meta property="og:title" content="Blog - Upira | Artigos sobre vida consciente" />
         <meta property="og:description" content="Explore nossos artigos sobre vida sustentável, consumo inteligente e práticas off-grid." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://upira.com.br/blog" />
+        <meta property="og:image" content="https://upira.com.br/og-image.jpg" />
+        <meta property="og:site_name" content="Upira" />
+        <meta property="og:locale" content="pt_BR" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Blog - Upira | Artigos sobre vida consciente" />
+        <meta name="twitter:description" content="Explore nossos artigos sobre vida sustentável, consumo inteligente e práticas off-grid." />
+        <meta name="twitter:image" content="https://upira.com.br/og-image.jpg" />
         
         <script type="application/ld+json">
           {JSON.stringify({

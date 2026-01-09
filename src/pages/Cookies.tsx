@@ -31,6 +31,7 @@ const Cookies = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Política de Cookies - Upira</title>
         <meta 
           name="description" 

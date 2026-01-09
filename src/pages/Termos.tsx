@@ -39,6 +39,7 @@ const Termos = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Termos de Uso - Upira</title>
         <meta 
           name="description" 
