@@ -35,6 +35,7 @@ const SistemaCaptacaoAgua = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Sistema de captação de água: beleza e funcionalidade | Upira</title>
         <meta 
           name="description" 
@@ -44,6 +45,7 @@ const SistemaCaptacaoAgua = () => {
           name="keywords" 
           content="captação de água, sistema de captação, água da chuva, sustentabilidade, design residencial, arquitetura sustentável, economia de água" 
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://upira.com.br/sistema-captacao-agua-beleza-funcionalidade" />
         
         <meta property="og:title" content="Sistema de captação de água: beleza e funcionalidade" />
@@ -51,6 +53,8 @@ const SistemaCaptacaoAgua = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://upira.com.br/sistema-captacao-agua-beleza-funcionalidade" />
         <meta property="og:image" content="https://upira.com.br/sistema-captacao-agua.jpg" />
+        <meta property="og:site_name" content="Upira" />
+        <meta property="og:locale" content="pt_BR" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sistema de captação de água: beleza e funcionalidade" />

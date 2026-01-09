@@ -14,9 +14,12 @@ const IluminacaoNatural = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Iluminação Natural: Arquitetura que Conversa com o Sol | Upira</title>
         <meta name="description" content="Estratégias de design para maximizar luz natural com sofisticação e economia. Descubra como transformar sua casa em um espaço luminoso e energeticamente eficiente." />
         <meta name="keywords" content="iluminação natural, arquitetura bioclimática, luz solar, eficiência energética, design sustentável, bem-estar, arquitetura residencial" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://upira.com.br/iluminacao-natural-arquitetura-conversa-com-sol" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Iluminação Natural: Arquitetura que Conversa com o Sol | Upira" />
@@ -24,6 +27,13 @@ const IluminacaoNatural = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://upira.com.br/iluminacao-natural-arquitetura-conversa-com-sol" />
         <meta property="og:image" content="https://upira.com.br/og-image.jpg" />
+        <meta property="og:site_name" content="Upira" />
+        <meta property="og:locale" content="pt_BR" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Iluminação Natural: Arquitetura que Conversa com o Sol | Upira" />
+        <meta name="twitter:description" content="Estratégias de design para maximizar luz natural com sofisticação e economia." />
+        <meta name="twitter:image" content="https://upira.com.br/og-image.jpg" />
         
         {/* Schema.org */}
         <script type="application/ld+json">

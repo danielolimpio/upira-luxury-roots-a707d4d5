@@ -34,6 +34,7 @@ const Privacidade = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Política de Privacidade - Upira</title>
         <meta 
           name="description" 
