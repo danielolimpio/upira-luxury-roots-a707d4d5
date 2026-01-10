@@ -17,14 +17,24 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Instalar dependências do Puppeteer
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libx11-xcb1 libxcomposite1 libxcursor1 libxdamage1 libxi6 libxtst6 libnss3 libcups2 libxss1 libxrandr2 libasound2 libatk1.0-0 libatk-bridge2.0-0 libpangocairo-1.0-0 libgtk-3-0 libgbm1
+
       - name: Instalar dependências
         run: npm install
 
-      - name: Build do projeto
+      - name: Build do projeto com pré-renderização
         run: npm run build
+        env:
+          CI: true
 
       - name: Mostrar arquivos gerados
-        run: ls -la dist/
+        run: |
+          ls -la dist/
+          echo "--- Verificando HTML pré-renderizado ---"
+          ls -la dist/ || true
 
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
