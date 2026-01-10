@@ -30,7 +30,9 @@ export const CategoryPage = ({
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>{title} | Upira - Raiz com atitude</title>
+        <meta name="robots" content="index, follow" />
         <meta name="description" content={description} />
         <meta name="keywords" content={`${title.toLowerCase()}, upira, off-grid, sustentabilidade, vida consciente`} />
         <link rel="canonical" href={pageUrl} />

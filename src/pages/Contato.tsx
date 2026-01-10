@@ -68,7 +68,9 @@ const Contato = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Contato | Upira - Fale Conosco</title>
+        <meta name="robots" content="index, follow" />
         <meta 
           name="description" 
           content="Entre em contato com a equipe Upira. Envie sua mensagem, dúvidas ou sugestões. Estamos em João Pessoa - PB." 

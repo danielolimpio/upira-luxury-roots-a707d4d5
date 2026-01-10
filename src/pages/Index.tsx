@@ -8,7 +8,9 @@ const Index = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Upira - Raiz com atitude | Off-grid com luxo e elegância</title>
+        <meta name="robots" content="index, follow" />
         <meta 
           name="description" 
           content="Off-grid com luxo: consumo inteligente, estilo de vida consciente e elegante. Viver bem, do seu jeito. Descubra autonomia, conforto e sofisticação sustentável." 
