@@ -40,7 +40,9 @@ const Quiz = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Quiz | Upira - Descubra seu estilo off-grid</title>
+        <meta name="robots" content="index, follow" />
         <meta 
           name="description" 
           content="Faça nossos quizzes interativos e descubra seu perfil off-grid, hábitos de consumo e preferências de estilo de vida consciente." 
