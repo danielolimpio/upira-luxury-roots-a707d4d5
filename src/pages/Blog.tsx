@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, Tag, BookOpen, HelpCircle } from "lucide-react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import despensaImage from "@/assets/category-comer.jpg";
 import habitosImage from "@/assets/category-explorar.jpg";
 import fogoImage from "@/assets/category-criar.jpg";
