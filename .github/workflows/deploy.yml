@@ -20,16 +20,20 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Build do projeto com pré-renderização
+      - name: Build do projeto
         run: npm run build
         env:
           CI: true
 
+      - name: Gerar HTMLs estáticos para SEO
+        run: node scripts/generate-static-html.mjs
+
       - name: Mostrar arquivos gerados
         run: |
+          echo "--- Arquivos no diretório dist ---"
           ls -la dist/
-          echo "--- Verificando HTML pré-renderizado ---"
-          ls -la dist/ || true
+          echo "--- HTMLs estáticos gerados ---"
+          ls -la dist/*.html || true
 
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
