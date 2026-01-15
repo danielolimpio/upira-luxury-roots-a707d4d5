@@ -1,5 +1,6 @@
 # ============================================
 # CONFIGURAÇÃO SEO E SPA - UPIRA
+# HTMLs estáticos por rota para SEO perfeito
 # ============================================
 
 # Forçar HTTPS
@@ -9,7 +10,9 @@
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
 
-# Adicionar trailing slash para URLs limpas (opcional mas recomendado para SEO)
+# ============================================
+# REGRAS PARA SERVIR HTMLs ESTÁTICOS POR ROTA
+# ============================================
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -27,7 +30,41 @@
   # Excluir extensões de arquivos comuns
   RewriteRule \.(txt|xml|json|ico|png|jpg|jpeg|gif|svg|webp|css|js|woff|woff2|ttf|eot|map|pdf)$ - [L]
   
-  # SPA Fallback: Se não for arquivo nem diretório, redireciona para index.html
+  # ============================================
+  # PÁGINAS COM HTML ESTÁTICO DEDICADO
+  # Servir arquivos HTML específicos para cada rota
+  # ============================================
+  
+  # Categorias principais
+  RewriteRule ^viver/?$ /viver.html [L]
+  RewriteRule ^comer/?$ /comer.html [L]
+  RewriteRule ^criar/?$ /criar.html [L]
+  RewriteRule ^explorar/?$ /explorar.html [L]
+  RewriteRule ^cultivar/?$ /cultivar.html [L]
+  
+  # Páginas institucionais
+  RewriteRule ^blog/?$ /blog.html [L]
+  RewriteRule ^sobre/?$ /sobre.html [L]
+  RewriteRule ^contato/?$ /contato.html [L]
+  RewriteRule ^quiz/?$ /quiz.html [L]
+  
+  # Páginas legais
+  RewriteRule ^privacidade/?$ /privacidade.html [L]
+  RewriteRule ^termos/?$ /termos.html [L]
+  RewriteRule ^cookies/?$ /cookies.html [L]
+  
+  # Artigos
+  RewriteRule ^despensa-off-grid-6-meses/?$ /despensa-off-grid-6-meses.html [L]
+  RewriteRule ^cozinhar-com-fogo-guia-pratico/?$ /cozinhar-com-fogo-guia-pratico.html [L]
+  RewriteRule ^sistema-captacao-agua-beleza-funcionalidade/?$ /sistema-captacao-agua-beleza-funcionalidade.html [L]
+  RewriteRule ^paisagismo-funcional-jardins-que-trabalham/?$ /paisagismo-funcional-jardins-que-trabalham.html [L]
+  RewriteRule ^iluminacao-natural-arquitetura-conversa-com-sol/?$ /iluminacao-natural-arquitetura-conversa-com-sol.html [L]
+  RewriteRule ^habitos-consumo-reduzem-estresse/?$ /habitos-consumo-reduzem-estresse.html [L]
+  
+  # ============================================
+  # SPA FALLBACK
+  # Para rotas não mapeadas, usar index.html
+  # ============================================
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
