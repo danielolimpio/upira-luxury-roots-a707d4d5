@@ -5,11 +5,16 @@ import { articles } from "@/data/articles";
 export const BlogGrid = () => {
   return (
     <section className="container mx-auto px-4 py-16 md:py-24">
-      <div className="mb-12 text-center">
-        <h2 className="font-heading text-4xl font-bold text-foreground md:text-5xl">
-          Conteúdo recente
-        </h2>
-        <p className="mt-4 font-body text-lg text-muted-foreground">
+      <div className="mb-14 flex flex-col items-start gap-3 border-b border-border pb-6 md:flex-row md:items-end md:justify-between">
+        <div>
+          <span className="font-body text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+            Editorial
+          </span>
+          <h2 className="mt-2 font-heading text-5xl font-bold text-foreground md:text-6xl">
+            Conteúdo recente
+          </h2>
+        </div>
+        <p className="font-body text-lg text-muted-foreground md:max-w-md md:text-right">
           Inspiração prática para viver com elegância e autonomia
         </p>
       </div>
