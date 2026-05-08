@@ -23,20 +23,20 @@ const navigation = [
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="container mx-auto flex h-16 items-center justify-between px-4">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+      <nav className="container mx-auto flex h-20 items-center justify-between px-4">
         {/* Logo */}
         <NavLink to="/" className="flex items-center">
-          <img src={logo} alt="Upira" className="h-14 w-auto" />
+          <img src={logo} alt="Upira" className="h-16 w-auto" />
         </NavLink>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex md:gap-8 mx-auto">
+        <div className="hidden md:flex md:gap-7 mx-auto">
           {navigation.map((item) => (
             <NavLink
               key={item.name}
               to={item.href}
-              className="font-body text-base font-medium text-foreground transition-colors hover:text-primary"
+              className="font-body text-[15px] font-semibold uppercase tracking-wider text-foreground transition-colors hover:text-primary"
               activeClassName="text-primary"
             >
               {item.name}
@@ -52,13 +52,13 @@ export const Header = () => {
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-64">
-            <nav className="flex flex-col gap-4 mt-8">
+          <SheetContent side="right" className="w-72">
+            <nav className="flex flex-col gap-5 mt-10">
               {navigation.map((item) => (
                 <NavLink
                   key={item.name}
                   to={item.href}
-                  className="font-body text-xl font-medium text-foreground transition-colors hover:text-primary"
+                  className="font-body text-lg font-semibold uppercase tracking-wider text-foreground transition-colors hover:text-primary"
                   activeClassName="text-primary"
                 >
                   {item.name}
