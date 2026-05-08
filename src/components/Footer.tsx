@@ -37,7 +37,7 @@ export const Footer = () => {
 
           {/* Navigation */}
           <div>
-            <h3 className="mb-4 font-heading text-base font-semibold text-foreground">Explorar</h3>
+            <h3 className="mb-4 font-body text-xs font-bold uppercase tracking-[0.25em] text-primary">Explorar</h3>
             <ul className="space-y-2 font-body text-base">
               <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
               <li><Link to="/sobre" className="text-muted-foreground hover:text-primary transition-colors">Sobre</Link></li>
@@ -49,7 +49,7 @@ export const Footer = () => {
 
           {/* Categories */}
           <div>
-            <h3 className="mb-4 font-heading text-base font-semibold text-foreground">Categorias</h3>
+            <h3 className="mb-4 font-body text-xs font-bold uppercase tracking-[0.25em] text-primary">Categorias</h3>
             <ul className="space-y-2 font-body text-base">
               <li><Link to="/viver" className="text-muted-foreground hover:text-primary transition-colors">Viver</Link></li>
               <li><Link to="/comer" className="text-muted-foreground hover:text-primary transition-colors">Comer</Link></li>
@@ -61,7 +61,7 @@ export const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h3 className="mb-4 font-heading text-base font-semibold text-foreground">Legal</h3>
+            <h3 className="mb-4 font-body text-xs font-bold uppercase tracking-[0.25em] text-primary">Legal</h3>
             <ul className="space-y-2 font-body text-base">
               <li><a href="/privacidade" className="text-muted-foreground hover:text-primary transition-colors">Privacidade</a></li>
               <li><a href="/termos" className="text-muted-foreground hover:text-primary transition-colors">Termos de Uso</a></li>
