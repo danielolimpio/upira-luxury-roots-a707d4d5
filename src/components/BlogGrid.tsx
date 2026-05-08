@@ -22,64 +22,44 @@ export const BlogGrid = () => {
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {articles.map((post) => {
           const Icon = post.icon;
-          
-          return post.link ? (
-            <Link key={post.id} to={post.link} className="block no-underline">
-              <Card 
-                className="group overflow-hidden border-border bg-card shadow-upira-sm transition-all hover:shadow-upira-md cursor-pointer h-full"
-              >
-                <div className="relative aspect-[3/2] overflow-hidden">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/60 to-transparent" />
-                </div>
-                <CardContent className="p-6">
-                  <div className="mb-3 flex items-center gap-2 text-base text-muted-foreground font-body">
-                    <Icon className="h-4 w-4 text-primary" />
-                    <span>{post.category}</span>
-                    <span>•</span>
-                    <span>{post.date}</span>
-                  </div>
-                  <h3 className="mb-2 font-heading text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="font-body text-base text-muted-foreground leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                </CardContent>
-              </Card>
-            </Link>
-          ) : (
-            <Card 
-              key={post.id}
-              className="group overflow-hidden border-border bg-card shadow-upira-sm transition-all hover:shadow-upira-md cursor-pointer h-full"
+          const cardInner = (
+            <Card
+              className="group h-full overflow-hidden rounded-3xl border-border bg-card shadow-upira-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-upira-lg cursor-pointer"
             >
-              <div className="relative aspect-[3/2] overflow-hidden">
+              <div className="relative aspect-[3/2] overflow-hidden rounded-t-3xl">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/60 via-primary-dark/10 to-transparent" />
+                <span className="absolute left-4 top-4 rounded-full bg-background/95 px-3 py-1 font-body text-xs font-semibold uppercase tracking-wider text-primary shadow-upira-sm">
+                  {post.category}
+                </span>
               </div>
-              <CardContent className="p-6">
-                <div className="mb-3 flex items-center gap-2 text-base text-muted-foreground font-body">
+              <CardContent className="p-7">
+                <div className="mb-3 flex items-center gap-2 font-body text-sm text-muted-foreground">
                   <Icon className="h-4 w-4 text-primary" />
-                  <span>{post.category}</span>
-                  <span>•</span>
                   <span>{post.date}</span>
                 </div>
-                <h3 className="mb-2 font-heading text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                <h3 className="mb-3 font-heading text-2xl font-bold leading-tight text-foreground transition-colors group-hover:text-primary md:text-3xl">
                   {post.title}
                 </h3>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
+                <p className="font-body text-base leading-relaxed text-muted-foreground">
                   {post.excerpt}
                 </p>
               </CardContent>
             </Card>
+          );
+
+          return post.link ? (
+            <Link key={post.id} to={post.link} className="block no-underline">
+              {cardInner}
+            </Link>
+          ) : (
+            <div key={post.id}>{cardInner}</div>
           );
         })}
       </div>
