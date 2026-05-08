@@ -1,8 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { BlogGrid } from "@/components/BlogGrid";
 import { Footer } from "@/components/Footer";
+import { HeroCarousel } from "@/components/home/HeroCarousel";
+import { MostRecent } from "@/components/home/MostRecent";
+import { Spotlight } from "@/components/home/Spotlight";
+import { Recommended } from "@/components/home/Recommended";
+import { TopDeals } from "@/components/home/TopDeals";
+import { LetsExplore } from "@/components/home/LetsExplore";
+import { TodaysPick } from "@/components/home/TodaysPick";
 
 const Index = () => {
   return (
@@ -68,8 +73,13 @@ const Index = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <main>
-          <Hero />
-          <BlogGrid />
+          <HeroCarousel />
+          <MostRecent />
+          <Spotlight />
+          <Recommended />
+          <TopDeals />
+          <LetsExplore />
+          <TodaysPick />
         </main>
         <Footer />
       </div>
