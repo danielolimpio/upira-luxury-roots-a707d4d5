@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HeroCarousel } from "@/components/home/HeroCarousel";
@@ -80,6 +81,16 @@ const Index = () => {
           <TopDeals />
           <LetsExplore />
           <TodaysPick />
+          <div className="container mx-auto px-4 pb-16 md:pb-24">
+            <div className="flex justify-center">
+              <Link
+                to="/blog"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary-foreground shadow-upira-lg transition-all hover:bg-primary-dark hover:shadow-xl"
+              >
+                Ver Todos os Artigos
+              </Link>
+            </div>
+          </div>
         </main>
         <Footer />
       </div>

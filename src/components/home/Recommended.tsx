@@ -29,6 +29,9 @@ export const Recommended = () => {
             <h3 className="mt-3 font-heading text-3xl font-bold leading-tight text-foreground transition-colors group-hover:text-primary md:text-4xl">
               {big.title}
             </h3>
+            <p className="mt-3 font-body text-base text-muted-foreground line-clamp-3">
+              {big.excerpt}
+            </p>
           </div>
         </Link>
 
@@ -52,6 +55,9 @@ export const Recommended = () => {
                 <h3 className="mt-2 font-heading text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary">
                   {post.title}
                 </h3>
+                <p className="mt-2 font-body text-sm text-muted-foreground line-clamp-2">
+                  {post.excerpt}
+                </p>
                 <p className="mt-2 font-body text-xs text-muted-foreground">
                   Daniel Olimpio · {post.date}
                 </p>

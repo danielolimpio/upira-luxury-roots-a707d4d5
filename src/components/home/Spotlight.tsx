@@ -26,12 +26,15 @@ export const Spotlight = () => {
                 <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                   {post.category}
                 </span>
-                <h3 className="mt-2 font-heading text-2xl font-bold leading-tight text-foreground transition-colors group-hover:text-primary">
-                  {post.title}
-                </h3>
-                <p className="mt-3 font-body text-xs text-muted-foreground">
-                  Daniel Olimpio · {post.date}
-                </p>
+              <h3 className="mt-2 font-heading text-2xl font-bold leading-tight text-foreground transition-colors group-hover:text-primary">
+                {post.title}
+              </h3>
+              <p className="mt-3 font-body text-sm text-muted-foreground line-clamp-3">
+                {post.excerpt}
+              </p>
+              <p className="mt-3 font-body text-xs text-muted-foreground">
+                Daniel Olimpio · {post.date}
+              </p>
               </div>
             </Link>
           ))}

@@ -51,24 +51,27 @@ export const TopDeals = () => {
         {/* Bottom row */}
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {row.map((post) => (
-            <Link key={post.id} to={post.link} className="group flex items-center gap-4">
-              <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-2xl">
+            <Link key={post.id} to={post.link} className="group block">
+              <div className="overflow-hidden rounded-2xl">
                 <img
                   src={post.image}
                   alt={post.title}
                   loading="lazy"
                   decoding="async"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <div>
+              <div className="mt-4">
                 <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                   {post.category}
                 </span>
-                <h4 className="mt-1 font-heading text-base font-bold leading-snug text-foreground transition-colors group-hover:text-primary">
+                <h4 className="mt-2 font-heading text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary">
                   {post.title}
                 </h4>
-                <p className="mt-1 font-body text-xs text-muted-foreground">
+                <p className="mt-2 font-body text-sm text-muted-foreground line-clamp-3">
+                  {post.excerpt}
+                </p>
+                <p className="mt-2 font-body text-xs text-muted-foreground">
                   Daniel Olimpio · {post.date}
                 </p>
               </div>
