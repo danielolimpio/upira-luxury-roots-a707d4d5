@@ -3,7 +3,7 @@ import { articles } from "@/data/articles";
 
 export const LetsExplore = () => {
   const main = articles[4];
-  const side = [articles[1], articles[5]];
+  const side = [articles[1], articles[5], articles[0]];
 
   return (
     <section className="container mx-auto px-4 py-16 md:py-24">
