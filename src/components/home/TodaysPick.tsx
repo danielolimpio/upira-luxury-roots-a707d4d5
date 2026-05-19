@@ -12,11 +12,11 @@ export const TodaysPick = () => {
         <h2 className="mb-10 font-heading text-4xl font-bold text-foreground md:text-5xl">
           Escolhas do Dia
         </h2>
-        <div className="grid gap-8 lg:grid-cols-[1fr_1.5fr_1fr]">
+        <div className="grid gap-8 lg:grid-cols-[1fr_1.5fr_1fr] lg:items-stretch">
           {/* Left column */}
-          <div className="flex flex-col gap-8">
+          <div className="flex h-full flex-col gap-8">
             {left.map((post) => (
-              <Link key={post.id} to={post.link} className="group block">
+              <Link key={post.id} to={post.link} className="group flex flex-1 flex-col">
                 <div className="overflow-hidden rounded-2xl">
                   <img
                     src={post.image}
@@ -26,18 +26,23 @@ export const TodaysPick = () => {
                     className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                <span className="mt-3 inline-block font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-                  {post.category}
-                </span>
-                <h4 className="mt-1 font-heading text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary">
-                  {post.title}
-                </h4>
+                <div className="mt-3 flex flex-1 flex-col">
+                  <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                    {post.category}
+                  </span>
+                  <h4 className="mt-1 font-heading text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary">
+                    {post.title}
+                  </h4>
+                  <p className="mt-2 font-body text-sm text-muted-foreground line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
 
           {/* Center */}
-          <Link to={center.link} className="group block">
+          <Link to={center.link} className="group flex h-full flex-col">
             <div className="overflow-hidden rounded-2xl">
               <img
                 src={center.image}
@@ -47,25 +52,27 @@ export const TodaysPick = () => {
                 className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
-            <span className="mt-4 inline-block font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-              {center.category}
-            </span>
-            <h3 className="mt-2 font-heading text-2xl font-bold leading-tight text-foreground transition-colors group-hover:text-primary md:text-3xl">
-              {center.title}
-            </h3>
-            <p className="mt-3 font-body text-sm text-muted-foreground">{center.excerpt}</p>
-            <p className="mt-3 font-body text-xs text-muted-foreground">
-              Daniel Olimpio · {center.date}
-            </p>
+            <div className="mt-4 flex flex-1 flex-col">
+              <span className="inline-block font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                {center.category}
+              </span>
+              <h3 className="mt-2 font-heading text-2xl font-bold leading-tight text-foreground transition-colors group-hover:text-primary md:text-3xl">
+                {center.title}
+              </h3>
+              <p className="mt-3 font-body text-sm text-muted-foreground line-clamp-3">{center.excerpt}</p>
+              <p className="mt-auto pt-3 font-body text-xs text-muted-foreground">
+                Daniel Olimpio · {center.date}
+              </p>
+            </div>
           </Link>
 
           {/* Right column */}
-          <div>
+          <div className="flex h-full flex-col">
             <h3 className="mb-5 font-heading text-2xl font-bold text-foreground">Últimos Artigos</h3>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-1 flex-col justify-between gap-5">
               {right.map((post, i) => (
-                <Link key={i} to={post.link} className="group flex items-center gap-3">
-                  <div className="h-16 w-20 flex-shrink-0 overflow-hidden rounded-xl">
+                <Link key={i} to={post.link} className="group flex items-start gap-4">
+                  <div className="h-24 w-28 flex-shrink-0 overflow-hidden rounded-xl">
                     <img
                       src={post.image}
                       alt={post.title}
@@ -74,13 +81,16 @@ export const TodaysPick = () => {
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <span className="font-body text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">
                       {post.category}
                     </span>
                     <h4 className="mt-0.5 font-heading text-sm font-bold leading-snug text-foreground transition-colors group-hover:text-primary">
                       {post.title}
                     </h4>
+                    <p className="mt-1 font-body text-xs text-muted-foreground line-clamp-2">
+                      {post.excerpt}
+                    </p>
                   </div>
                 </Link>
               ))}
