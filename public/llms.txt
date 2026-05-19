@@ -1,0 +1,36 @@
+# Upira
+
+> Raiz com atitude — lifestyle premium off-grid: viver, comer, criar, explorar e cultivar com elegância.
+
+Upira é um blog editorial sobre vida off-grid sofisticada, autossuficiência elegante e conexão com a natureza. Conteúdo autoral de Daniel Olimpio cobrindo despensa, cozinha com fogo, captação de água, paisagismo funcional, iluminação natural e hábitos de consumo conscientes.
+
+## Pages
+
+- [Home](/): Destaques, artigos recentes e seções editoriais do Upira.
+- [Sobre](/sobre): Manifesto, propósito e história do projeto Upira.
+- [Blog](/blog): Índice completo dos artigos publicados.
+- [Contato](/contato): Canais de contato e parcerias.
+- [Quiz](/quiz): Quizzes interativos sobre estilo de vida off-grid.
+
+## Categorias
+
+- [Viver](/viver): Estilo de vida off-grid com elegância e propósito.
+- [Comer](/comer): Alimentação consciente, despensa e cozinha rústica.
+- [Criar](/criar): Construir, fazer com as mãos e habitar com intenção.
+- [Explorar](/explorar): Natureza, territórios e jornadas autorais.
+- [Cultivar](/cultivar): Hortas, paisagismo funcional e cultivo sustentável.
+
+## Artigos em destaque
+
+- [Despensa Off-Grid](/despensa-off-grid): Como montar uma despensa autossuficiente e elegante.
+- [Cozinhar com Fogo](/cozinhar-com-fogo): Técnicas e rituais da cozinha em chamas vivas.
+- [Sistema de Captação de Água](/sistema-captacao-agua): Projeto e prática para autonomia hídrica.
+- [Paisagismo Funcional](/paisagismo-funcional): Jardins produtivos e bonitos.
+- [Iluminação Natural](/iluminacao-natural): Aproveitando a luz para morar melhor.
+- [Hábitos de Consumo](/habitos-consumo): Consumir menos, escolher melhor.
+
+## Optional
+
+- [Política de Privacidade](/privacidade)
+- [Termos de Uso](/termos)
+- [Política de Cookies](/cookies)
