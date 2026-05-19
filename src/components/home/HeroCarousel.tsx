@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { articles } from "@/data/articles";
@@ -10,6 +10,13 @@ export const HeroCarousel = () => {
 
   const next = () => setIndex((i) => (i + 1) % featured.length);
   const prev = () => setIndex((i) => (i - 1 + featured.length) % featured.length);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % featured.length);
+    }, 3000);
+    return () => clearInterval(id);
+  }, [featured.length]);
 
   return (
     <section className="relative w-full overflow-hidden">
