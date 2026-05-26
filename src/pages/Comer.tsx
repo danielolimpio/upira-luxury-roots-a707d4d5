@@ -19,8 +19,20 @@ const Comer = () => {
   return (
     <CategoryPage
       title="Comer"
+      headline="Cozinha Rural Gourmet: do Fogo à Mesa"
+      seoTitle="Comer Bem no Campo: Receitas Gourmet, Fogo e Fermentação | Upira"
+      metaDescription="Receitas rurais sofisticadas, cozinha no fogo a lenha, fermentação natural, pães artesanais e ingredientes ancestrais. Alta gastronomia com raiz."
+      keywords="cozinha rural, receitas no fogo a lenha, fermentação natural, pães artesanais, gastronomia off-grid, comida de raiz, conservas caseiras"
       description="Da fogueira ao gourmet — cozinhe com ingredientes naturais e técnicas refinadas."
+      eyebrow="Categoria · Comer"
       heroImage={categoryImage}
+      intro={{
+        heading: "Sabor de raiz, técnica de chef",
+        paragraphs: [
+          "Reunimos receitas, técnicas e histórias da cozinha rural contemporânea: cozimento no fogo a lenha, fermentação natural, pães de fermento selvagem e o uso criativo de ingredientes nativos como mandioca, ervas silvestres e tubérculos esquecidos.",
+          "Aqui a gastronomia off-grid encontra o refinamento — receitas testadas, guias passo a passo e dicas de conservação para quem quer comer melhor, com mais sabor, mais saúde e menos dependência do supermercado.",
+        ],
+      }}
       recentPosts={recentPosts}
       featuredPosts={featuredPosts}
       quizTitle="Que tipo de fogo combina com seu estilo?"

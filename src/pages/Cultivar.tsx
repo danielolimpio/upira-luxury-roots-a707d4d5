@@ -19,8 +19,20 @@ const Cultivar = () => {
   return (
     <CategoryPage
       title="Cultivar"
+      headline="Cultivar Mente, Corpo e Espírito no Ritmo da Terra"
+      seoTitle="Cultivar Bem-Estar e Slow Living no Campo | Upira"
+      metaDescription="Slow living, rituais matinais, journaling, meditação ao ar livre e autocuidado rural. Cultive bem-estar genuíno longe dos clichês de autoajuda."
+      keywords="slow living, autocuidado, rituais matinais, meditação ao ar livre, journaling, bem-estar rural, crescimento pessoal, vida no campo"
       description="Nutra sua mente, corpo e espírito — cresça com autenticidade e propósito."
+      eyebrow="Categoria · Cultivar"
       heroImage={categoryImage}
+      intro={{
+        heading: "Crescer por dentro, no tempo da natureza",
+        paragraphs: [
+          "Conteúdos sobre slow living, rituais matinais, meditação ao ar livre e journaling — práticas simples que cultivam clareza mental, equilíbrio emocional e propósito no dia a dia rural.",
+          "Aqui o autocuidado vai além de estética: é construir uma rotina que respeita seus ciclos, fortalece sua identidade e traz a sabedoria ancestral para a vida moderna. Crescimento real, sem clichês de autoajuda.",
+        ],
+      }}
       recentPosts={recentPosts}
       featuredPosts={featuredPosts}
       quizTitle="Qual ritual combina com você?"

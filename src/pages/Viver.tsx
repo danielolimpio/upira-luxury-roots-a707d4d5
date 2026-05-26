@@ -19,8 +19,20 @@ const Viver = () => {
   return (
     <CategoryPage
       title="Viver"
+      headline="Viver Off-Grid com Autonomia e Conforto"
+      seoTitle="Viver Off-Grid: Autonomia, Conforto e Vida no Campo | Upira"
+      metaDescription="Guias práticos para viver off-grid com elegância: energia solar, despensa autossuficiente, paisagismo funcional e conforto térmico. Raiz com atitude."
+      keywords="viver off-grid, vida no campo, autonomia rural, energia solar residencial, casa autossustentável, minimalismo rural, despensa off-grid"
       description="Autonomia, conforto e elegância — viva do seu jeito, com sofisticação."
+      eyebrow="Categoria · Viver"
       heroImage={categoryImage}
+      intro={{
+        heading: "Viver bem longe das amarras urbanas",
+        paragraphs: [
+          "Aqui você encontra guias completos sobre vida off-grid, autossuficiência energética e como projetar uma rotina rural que combine simplicidade e refinamento. Desde a escolha do terreno até o sistema solar ideal, mostramos o caminho para morar com autonomia real.",
+          "Explore conteúdos sobre cabanas modernas, casas autossustentáveis, despensa de longa duração, conforto térmico passivo e paisagismo funcional — tudo pensado para quem quer trocar o ruído da cidade por uma vida com raiz e atitude.",
+        ],
+      }}
       recentPosts={recentPosts}
       featuredPosts={featuredPosts}
       quizTitle="Qual seu perfil off-grid?"

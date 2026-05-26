@@ -19,8 +19,20 @@ const Explorar = () => {
   return (
     <CategoryPage
       title="Explorar"
+      headline="Explorar com Propósito: Consumo Consciente e Slow Travel"
+      seoTitle="Explorar com Propósito: Consumo Consciente e Slow Travel | Upira"
+      metaDescription="Slow travel, turismo regenerativo, digital detox, trilhas rurais e consumo consciente. Explore o mundo — e a vida — com mais propósito e menos pressa."
+      keywords="slow travel, turismo regenerativo, consumo consciente, digital detox, trilhas rurais Brasil, minimalismo, viagem com propósito"
       description="Descubra práticas inteligentes que trazem bem-estar genuíno sem sacrificar o conforto."
+      eyebrow="Categoria · Explorar"
       heroImage={categoryImage}
+      intro={{
+        heading: "Menos pressa, mais sentido",
+        paragraphs: [
+          "Guias de slow travel, turismo regenerativo, trilhas em áreas rurais e roteiros para desacelerar com elegância. Aqui viajar é antes de tudo um exercício de presença — e de consumo mais inteligente.",
+          "Reflexões e práticas sobre minimalismo, digital detox e filosofia off-grid para quem busca liberdade com responsabilidade. Explorar é também aprender a escolher melhor o que entra na sua vida.",
+        ],
+      }}
       recentPosts={recentPosts}
       featuredPosts={featuredPosts}
       quizTitle="Seu consumo é inteligente?"
