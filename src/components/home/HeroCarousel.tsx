@@ -24,6 +24,11 @@ export const HeroCarousel = () => {
         <img
           src={post.image}
           alt={post.title}
+          width={1600}
+          height={900}
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/40 via-transparent to-transparent" />
