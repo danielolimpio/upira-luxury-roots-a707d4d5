@@ -24,6 +24,8 @@ import Privacidade from "./pages/Privacidade";
 import Termos from "./pages/Termos";
 import Cookies from "./pages/Cookies";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
+import PwaInstall from "./components/PwaInstall";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +36,8 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
+          <PwaInstall />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/viver" element={<Viver />} />

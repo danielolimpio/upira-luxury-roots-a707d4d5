@@ -1,0 +1,33 @@
+{
+  "name": "Upira — Raiz com atitude",
+  "short_name": "Upira",
+  "description": "Off-grid com luxo: consumo inteligente, estilo de vida consciente e elegante.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F8F5F0",
+  "theme_color": "#1B5E20",
+  "lang": "pt-BR",
+  "categories": ["lifestyle", "education", "news"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
