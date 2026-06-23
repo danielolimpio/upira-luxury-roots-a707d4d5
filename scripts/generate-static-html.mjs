@@ -173,6 +173,15 @@ function generateHTML(page) {
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+
+    <!-- PWA: instalação nativa -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#1B5E20" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Upira" />
+    <meta name="application-name" content="Upira" />
     
     <!-- SEO Meta Tags Únicos -->
     <title>${page.title}</title>
